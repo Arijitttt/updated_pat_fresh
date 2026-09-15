@@ -1,123 +1,98 @@
-# Client Product Catalogue Website
+# Fresh Product Catalogue Website
 
-A modern, responsive product catalogue website built with **Next.js, React, TypeScript, and Tailwind CSS**.
+A modern, responsive product catalogue website built for a local food and grocery business using **Next.js, React, TypeScript, and Tailwind CSS**.
 
-The website is designed for a business that maintains a large catalogue of products such as fish, seafood, vegetables, fruits, grocery items, chocolates, beverages, and other food products.
+The website allows customers to explore a large collection of products, browse products by category, view detailed product information, and contact the business.
 
-The primary purpose of the website is to allow customers to:
-
-- Browse available products
-- Explore products by category
-- Search and filter products
-- View detailed product information
-- Learn about the business
-- Contact the business
-
-This project is intentionally designed as a **product information and catalogue platform**, rather than a full e-commerce application. There is currently no shopping cart, online checkout, or payment gateway.
+This is primarily an **information and product catalogue website**. It does not currently include online ordering, shopping cart, checkout, or payment processing.
 
 ---
 
-# Table of Contents
+## ✨ Features
 
-- [Project Overview](#project-overview)
-- [Features](#features)
-- [Technology Stack](#technology-stack)
-- [Why Next.js](#why-nextjs)
-- [Next.js Architecture](#nextjs-architecture)
-- [Project Structure](#project-structure)
-- [App Router](#app-router)
-- [Routing](#routing)
-- [Dynamic Routes](#dynamic-routes)
-- [Components](#components)
-- [Data Flow](#data-flow)
-- [Rendering Strategy](#rendering-strategy)
-- [Client Components](#client-components)
-- [Styling](#styling)
-- [Animations](#animations)
-- [Image Optimization](#image-optimization)
-- [SEO and Metadata](#seo-and-metadata)
-- [404 Handling](#404-handling)
-- [Responsive Design](#responsive-design)
-- [Product Catalogue](#product-catalogue)
-- [Category System](#category-system)
-- [Contact System](#contact-system)
-- [Site Configuration](#site-configuration)
-- [Installation](#installation)
-- [Development](#development)
-- [Production Build](#production-build)
-- [Deployment](#deployment)
-- [Environment Variables](#environment-variables)
-- [Performance](#performance)
-- [Security](#security)
-- [Scalability](#scalability)
-- [Future Improvements](#future-improvements)
-- [License]
+- 🏠 Modern responsive homepage
+- 📦 Large product catalogue
+- 🗂️ Category-based product browsing
+- 🔍 Product search and filtering
+- 📄 Individual product detail pages
+- 🖼️ Optimized product and category images
+- 📱 Fully responsive design
+- 🎨 Modern UI with Tailwind CSS
+- ✨ Smooth animations with Framer Motion
+- 📞 Contact page and enquiry form
+- 🔗 Dynamic product and category URLs
+- ❌ Custom 404 page
+- 🚀 SEO-friendly Next.js architecture
 
 ---
 
-# Project Overview
+## 🛍️ Product Categories
 
-The application is a modern product catalogue website developed using the **Next.js App Router**.
+The catalogue is organized into different product categories, including:
 
-The website provides a structured way to present a large number of products without requiring an online ordering system.
+- Fish & Seafood
+- Vegetables
+- Fruits
+- Grocery & Grains
+- Chocolates
+- Beverages
 
-The current architecture focuses on:
-
-1. Fast page loading
-2. SEO-friendly pages
-3. Responsive UI
-4. Reusable React components
-5. Dynamic product and category pages
-6. Optimized images
-7. Smooth animations
-8. Simple content management
-9. Easy future expansion
+The category structure can be extended easily as the business adds new product types.
 
 ---
 
-# Features
+# 🧑‍💻 Tech Stack
 
-## Homepage
-
-The homepage provides an overview of the business and highlights important product categories.
-
-Main sections include:
-
-- Hero section
-- Business introduction
-- Category navigation
-- Featured products
-- Recently listed products
-- Business features
-- Call-to-action section
-- Footer
+| Technology | Purpose |
+|---|---|
+| **Next.js** | React framework and application architecture |
+| **React** | UI development |
+| **TypeScript** | Type safety |
+| **Tailwind CSS** | Styling and responsive design |
+| **Framer Motion** | Animations and transitions |
+| **Next/Image** | Image optimization |
+| **Next/Link** | Client-side navigation |
+| **Git/GitHub** | Version control |
 
 ---
 
-## Product Catalogue
+# ⚡ Why Next.js?
 
-Users can browse the complete product catalogue.
+Next.js is used as the main framework because this project contains many product and category pages that benefit from a structured routing system and good performance.
 
-Each product can contain:
+Important Next.js features used in the project include:
 
-- Product name
-- Category
-- Product image
-- Description
-- Origin
-- Availability
-- Additional product information
+- App Router
+- File-based routing
+- Dynamic routes
+- Server Components
+- Client Components
+- Metadata
+- Image Optimization
+- `next/link`
+- Custom 404 pages
+- Production optimization
 
 ---
 
-## Category Filtering
+# 🏗️ Project Architecture
 
-Products can be organized into categories such as:
+The application follows a component-based Next.js architecture.
 
 ```text
-Fish & Seafood
-Vegetables
-Fruits
-Grocery & Grains
-Chocolates
-Beverages
+                         WEBSITE
+                            │
+                            ▼
+                         Next.js
+                            │
+                    ┌───────┴───────┐
+                    │               │
+                 App Router      Components
+                    │               │
+          ┌─────────┼─────────┐     │
+          │         │         │     │
+       Products  Categories  Contact │
+          │         │               │
+          ▼         ▼               ▼
+      Product    Category       Reusable UI
+       Pages       Pages
