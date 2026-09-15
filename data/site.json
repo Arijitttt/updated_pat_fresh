@@ -1,0 +1,14 @@
+{
+  "name": "PAT Fresh",
+  "tagline": "Fish, vegetables, and fruit from local markets, catalogued daily.",
+  "description": "A running catalogue of what's in stock this week — browse by category, check origins, and see what's fresh.",
+  "phone": "+91 8777352462",
+  "email": "dm.patfresh@gmail.com",
+  "address": "GROUND FLOOR, 209, UNIT NO GKK-4A, ACHARYA JAGADISH CHANDRA BOSE ROAD, KOLKATA, West Bengal, 700017.",
+  "hours": "6:00 AM – 8:00 PM, all days",
+  "stats": [
+    { "label": "SKUs catalogued", "value": "1,300+" },
+    { "label": "Categories tracked", "value": "4" },
+    { "label": "Catalogue updated", "value": "Daily" }
+  ]
+}

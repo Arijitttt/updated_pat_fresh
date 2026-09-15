@@ -1,0 +1,22 @@
+[
+  {
+    "id": "other-001",
+    "name": "Basmati Rice",
+    "slug": "basmati-rice",
+    "category": "other",
+    "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800&q=80",
+    "description": "Long-grain aromatic rice, aged for firmer texture on cooking.",
+    "origin": "Punjab, India",
+    "unit": "per 5kg bag"
+  },
+  {
+    "id": "other-002",
+    "name": "Mustard Oil",
+    "slug": "mustard-oil",
+    "category": "other",
+    "image": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=800&q=80",
+    "description": "Cold-pressed mustard oil with a sharp, pungent flavour, a staple in Bengali cooking.",
+    "origin": "West Bengal, India",
+    "unit": "per litre"
+  }
+]

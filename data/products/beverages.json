@@ -1,0 +1,602 @@
+[
+  {
+    "id": "bev-001",
+    "name": "Darjeeling First Flush Black Tea",
+    "slug": "darjeeling-first-flush-black-tea",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=800&q=80",
+    "description": "Delicate, floral, and light-bodied loose-leaf black tea harvested from high-elevation Himalayan estates.",
+    "origin": "Darjeeling district, West Bengal",
+    "unit": "per 250g pack"
+  },
+  {
+    "id": "bev-002",
+    "name": "Single-Estate Arabica Coffee Beans",
+    "slug": "arabica-coffee-beans",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=800&q=80",
+    "description": "Medium-dark roasted whole coffee beans with subtle notes of cocoa, nuts, and mild citrus acidity.",
+    "origin": "Chikmagalur, Karnataka",
+    "unit": "per 500g pack"
+  },
+  {
+    "id": "bev-003",
+    "name": "Tender Coconut Water",
+    "slug": "tender-coconut-water",
+    "category": "beverages",
+    "image": "/images/Coconut_Water.jpg",
+    "description": "Naturally sweet, electrolyte-rich fresh green coconut water harvested daily.",
+    "origin": "South 24 Parganas, West Bengal",
+    "unit": "per piece"
+  },
+  {
+    "id": "bev-004",
+    "name": "Kolkata Masala Chai Blend",
+    "slug": "kolkata-masala-chai-blend",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1561336313-0bd5e0b27ec8?w=800&q=80",
+    "description": "Robust CTC black tea blended with crushed cardamom, dried ginger, cloves, and cinnamon bark.",
+    "origin": "Assam & Dooars",
+    "unit": "per 500g pack"
+  },
+  {
+    "id": "bev-005",
+    "name": "Darjeeling Second Flush Muscatel Tea",
+    "slug": "darjeeling-second-flush-muscatel-tea",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1597481499750-3e6b22637e12?w=800&q=80",
+    "description": "Summer-harvested orthodox tea known for its distinctive muscatel grape notes and amber liquor.",
+    "origin": "Kurseong, Darjeeling",
+    "unit": "per 250g pack"
+  },
+  {
+    "id": "bev-006",
+    "name": "Assam Orthodox Golden Tips Tea",
+    "slug": "assam-orthodox-golden-tips-tea",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=800&q=80",
+    "description": "Malty, full-bodied black tea abundant in golden tips that impart a brisk, honeyed finish.",
+    "origin": "Upper Assam",
+    "unit": "per 200g pack"
+  },
+  {
+    "id": "bev-007",
+    "name": "Robusta Cherry Coffee Beans",
+    "slug": "robusta-cherry-coffee-beans",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?w=800&q=80",
+    "description": "Sun-dried bold Robusta coffee beans roasted dark for rich crema, low acidity, and heavy body.",
+    "origin": "Wayanad, Kerala",
+    "unit": "per 500g pack"
+  },
+  {
+    "id": "bev-008",
+    "name": "South Indian Filter Coffee Blend (80:20)",
+    "slug": "south-indian-filter-coffee-blend",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=800&q=80",
+    "description": "Finely ground plantation coffee roasted with 20% high-grade chicory for traditional decoctions.",
+    "origin": "Coorg, Karnataka",
+    "unit": "per 500g pack"
+  },
+  {
+    "id": "bev-009",
+    "name": "Monsooned Malabar AA Coffee",
+    "slug": "monsooned-malabar-aa-coffee",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1587734195503-904fca47e0e9?w=800&q=80",
+    "description": "Exposed to monsoon winds for mellow, neutral acidity and deep earthy, spicy complexity.",
+    "origin": "Malabar Coast, Kerala",
+    "unit": "per 250g pack"
+  },
+  {
+    "id": "bev-010",
+    "name": "Nilgiri Frost Tea",
+    "slug": "nilgiri-frost-tea",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1563822249548-9a72b6353cd1?w=800&q=80",
+    "description": "Winter-harvested orthodox tea from the Blue Mountains, crisp and fragrant with citrusy notes.",
+    "origin": "Nilgiris, Tamil Nadu",
+    "unit": "per 100g tin"
+  },
+  {
+    "id": "bev-011",
+    "name": "Kashmiri Kahwa Green Tea",
+    "slug": "kashmiri-kahwa-green-tea",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=800&q=80",
+    "description": "Whole green tea leaves blended with Kashmiri saffron threads, cinnamon, and green cardamom pods.",
+    "origin": "Kashmir Valley",
+    "unit": "per 100g tin"
+  },
+  {
+    "id": "bev-012",
+    "name": "Aam Pora Sharbat Concentrate",
+    "slug": "aam-pora-sharbat-concentrate",
+    "category": "beverages",
+    "image": "/images/Aam_Pora_Sharbat.jpg",
+    "description": "Roasted green mango pulp infused with roasted cumin, black salt, and mint for cooling summers.",
+    "origin": "Malda district, West Bengal",
+    "unit": "per 750ml bottle"
+  },
+  {
+    "id": "bev-013",
+    "name": "Cold-Pressed Sugarcane Juice",
+    "slug": "cold-pressed-sugarcane-juice",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1589733955941-5eeaf752f6dd?w=800&q=80",
+    "description": "Raw, unpasteurized cane juice pressed fresh with a squeeze of lime and crushed ginger root.",
+    "origin": "Nadia district, West Bengal",
+    "unit": "per 1L bottle"
+  },
+  {
+    "id": "bev-014",
+    "name": "Gondhoraj Lime Squash",
+    "slug": "gondhoraj-lime-squash",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=800&q=80",
+    "description": "Artisanal citrus cordial prepared from aromatic Bengal Rangpur/Gondhoraj limes and pure cane syrup.",
+    "origin": "Barasat, North 24 Parganas",
+    "unit": "per 500ml bottle"
+  },
+  {
+    "id": "bev-015",
+    "name": "Sweet Bael Panna (Wood Apple Squash)",
+    "slug": "sweet-bael-panna",
+    "category": "beverages",
+    "image": "/images/Bael_Panna.jpg",
+    "description": "Fibrous and fragrant ripe wood apple nectar balanced with palm sugar, fennel, and crushed ice.",
+    "origin": "Bankura district, West Bengal",
+    "unit": "per 500ml bottle"
+  },
+  {
+    "id": "bev-016",
+    "name": "Kokum Agal (Wild Mangosteen Extract)",
+    "slug": "kokum-agal-extract",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1527661591475-527312dd65f5?w=800&q=80",
+    "description": "Unsweetened pure tart kokum fruit juice used to craft traditional coastal cooling sherbets.",
+    "origin": "Ratnagiri, Maharashtra",
+    "unit": "per 500ml bottle"
+  },
+  {
+    "id": "bev-017",
+    "name": "Nannari Sharbat Syrup (Indian Sarsaparilla)",
+    "slug": "nannari-sharbat-syrup",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1536935338788-846bb9981813?w=800&q=80",
+    "description": "Aromatic cooling root extract syrup traditionally mixed with club soda and fresh lime juice.",
+    "origin": "Madurai, Tamil Nadu",
+    "unit": "per 750ml bottle"
+  },
+  {
+    "id": "bev-018",
+    "name": "Spiced Buttermilk (Ghol / Chaas)",
+    "slug": "spiced-buttermilk-ghol",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=800&q=80",
+    "description": "Cultured yogurt churned with toasted cumin, fresh coriander, green chilies, and rock salt.",
+    "origin": "Hooghly district, West Bengal",
+    "unit": "per 1L bottle"
+  },
+  {
+    "id": "bev-019",
+    "name": "Organic Chamomile Herbal Infusion",
+    "slug": "organic-chamomile-herbal-infusion",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?w=800&q=80",
+    "description": "Caffeine-free dried whole German chamomile flower heads with soothing apple-like aroma.",
+    "origin": "Kangra Valley, Himachal Pradesh",
+    "unit": "per 50g tin"
+  },
+  {
+    "id": "bev-020",
+    "name": "Sundarban Wildflower Raw Honey Drink",
+    "slug": "sundarban-wildflower-honey-drink",
+    "category": "beverages",
+    "image": "/images/Honey_Drink.jpg",
+    "description": "Mangrove forest raw honey dissolved in spring water with holy basil and lemon extract.",
+    "origin": "Sundarbans, West Bengal",
+    "unit": "per 330ml glass bottle"
+  },
+  {
+    "id": "bev-021",
+    "name": "Sparkling Apple Cider (Non-Alcoholic)",
+    "slug": "sparkling-apple-cider",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1568909344668-6f14a07b56a0?w=800&q=80",
+    "description": "Carbonated cold-pressed juice made exclusively from crisp Himalayan Royal Delicious apples.",
+    "origin": "Shimla, Himachal Pradesh",
+    "unit": "per 750ml bottle"
+  },
+  {
+    "id": "bev-022",
+    "name": "Cold-Brew Reserve Arabica Concentrate",
+    "slug": "cold-brew-reserve-arabica",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=800&q=80",
+    "description": "Steeped slowly for 18 hours in mountain water for a velvety, low-acid iced coffee base.",
+    "origin": "Araku Valley, Andhra Pradesh",
+    "unit": "per 500ml bottle"
+  },
+  {
+    "id": "bev-023",
+    "name": "Matcha Ceremonial Grade Green Tea Powder",
+    "slug": "matcha-ceremonial-grade-green-tea",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=800&q=80",
+    "description": "Shade-grown stone-ground tencha leaf powder with vivid green color and sweet umami taste.",
+    "origin": "Uji, Kyoto / Nilgiri Blend",
+    "unit": "per 30g tin"
+  },
+  {
+    "id": "bev-024",
+    "name": "Hibiscus Rose Herbal Iced Tea",
+    "slug": "hibiscus-rose-herbal-iced-tea",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1558160074-4d7d8bdf4256?w=800&q=80",
+    "description": "Tart sun-dried hibiscus calyces blended with Pushkar damask rose petals.",
+    "origin": "Pushkar, Rajasthan",
+    "unit": "per 100g pack"
+  },
+  {
+    "id": "bev-025",
+    "name": "Fresh Sweet Mosambi Juice",
+    "slug": "fresh-sweet-mosambi-juice",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?w=800&q=80",
+    "description": "Cold-extracted sweet lime juice packaged without water dilution or added preservatives.",
+    "origin": "Nagpur, Maharashtra",
+    "unit": "per 1L bottle"
+  },
+  {
+    "id": "bev-026",
+    "name": "Lemongrass & Ginger Tisane",
+    "slug": "lemongrass-ginger-tisane",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1546852199-2d8e8c4aaada?w=800&q=80",
+    "description": "Cut aromatic lemongrass stalks paired with spicy dried sun-cured ginger slivers.",
+    "origin": "Dooars, North Bengal",
+    "unit": "per 150g pack"
+  },
+  {
+    "id": "bev-027",
+    "name": "Natural Tender Coconut Shake Base",
+    "slug": "natural-tender-coconut-shake-base",
+    "category": "beverages",
+    "image": "/images/Coconut_Shake.jpg",
+    "description": "Smooth purée of young coconut pulp and water ready for blending into tropical frappes.",
+    "origin": "South 24 Parganas, West Bengal",
+    "unit": "per 500ml pack"
+  },
+  {
+    "id": "bev-028",
+    "name": "Alphonso Mango Nectar",
+    "slug": "alphonso-mango-nectar",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1546173159-315724a31696?w=800&q=80",
+    "description": "Rich golden pulp squeezed exclusively from naturally ripened Ratnagiri Hapus mangoes.",
+    "origin": "Ratnagiri, Maharashtra",
+    "unit": "per 1L bottle"
+  },
+  {
+    "id": "bev-029",
+    "name": "Artisanal Tonic Water (Citrus & Quinine)",
+    "slug": "artisanal-tonic-water",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800&q=80",
+    "description": "Carbonated botanical tonic brewed with natural cinchona bark quinine and orange peel.",
+    "origin": "Kolkata, West Bengal",
+    "unit": "per 250ml glass bottle"
+  },
+  {
+    "id": "bev-030",
+    "name": "Ginger Beer Brew (Non-Alcoholic)",
+    "slug": "ginger-beer-brew",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=800&q=80",
+    "description": "Naturally fermented sparkling soda made with fresh fiery mountain ginger and cane sugar.",
+    "origin": "Kalimpong, West Bengal",
+    "unit": "per 330ml glass bottle"
+  },
+  {
+    "id": "bev-031",
+    "name": "Roasted Barley Tea (Jau Chai)",
+    "slug": "roasted-barley-tea",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=800&q=80",
+    "description": "Toasted hulled barley grains brewed hot or cold for a grain-forward, nutty, zero-caffeine tea.",
+    "origin": "Purulia district, West Bengal",
+    "unit": "per 300g pack"
+  },
+  {
+    "id": "bev-032",
+    "name": "Pure Kashmiri Saffron Kehwa Syrup",
+    "slug": "pure-saffron-kehwa-syrup",
+    "category": "beverages",
+    "image": "/images/Saffron_Syrup.jpg",
+    "description": "Slow-reduced simple syrup infused with pure Mongra saffron strands and crushed green cardamoms.",
+    "origin": "Pampore, Jammu & Kashmir",
+    "unit": "per 250ml bottle"
+  },
+  {
+    "id": "bev-033",
+    "name": "Tulsi Holy Basil Wellness Tea",
+    "slug": "tulsi-holy-basil-wellness-tea",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1597481499750-3e6b22637e12?w=800&q=80",
+    "description": "Dried blend of Krishna, Rama, and Vana tulsi leaves for daily restorative herbal tea.",
+    "origin": "Vrindavan, Uttar Pradesh",
+    "unit": "per 100g tin"
+  },
+  {
+    "id": "bev-034",
+    "name": "Spiced Guava Nectar",
+    "slug": "spiced-guava-nectar",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?w=800&q=80",
+    "description": "Pulpy pink Allahabad guava juice spiced with red chili flakes and black Himalayan salt.",
+    "origin": "Prayagraj, Uttar Pradesh",
+    "unit": "per 1L bottle"
+  },
+  {
+    "id": "bev-035",
+    "name": "Cold-Pressed Pomegranate Juice",
+    "slug": "cold-pressed-pomegranate-juice",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=800&q=80",
+    "description": "100% pure Ruby Red pomegranate juice extracted gently without bitter white pith tannins.",
+    "origin": "Solapur, Maharashtra",
+    "unit": "per 500ml bottle"
+  },
+  {
+    "id": "bev-036",
+    "name": "Sparkling Natural Mineral Water",
+    "slug": "sparkling-natural-mineral-water",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1560023907-5f339617ea30?w=800&q=80",
+    "description": "Bottled directly at the glacial spring source, enriched naturally with calcium and magnesium.",
+    "origin": "Himalayan foothills, Uttarakhand",
+    "unit": "per 750ml glass bottle"
+  },
+  {
+    "id": "bev-037",
+    "name": "Sweet Rose Sharbat Cordial",
+    "slug": "sweet-rose-sharbat-cordial",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=800&q=80",
+    "description": "Classic fragrant red rose petal syrup ideal for faloodas, milkshakes, and chilled sodas.",
+    "origin": "Aligarh, Uttar Pradesh",
+    "unit": "per 750ml bottle"
+  },
+  {
+    "id": "bev-038",
+    "name": "French Press Coarse Dark Roast Coffee",
+    "slug": "french-press-coarse-dark-roast",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=800&q=80",
+    "description": "Evenly ground coarse roast optimized for immersion brewing, featuring dark chocolate notes.",
+    "origin": "Shevaroy Hills, Tamil Nadu",
+    "unit": "per 250g pack"
+  },
+  {
+    "id": "bev-039",
+    "name": "Fresh Valencia Orange Juice",
+    "slug": "fresh-valencia-orange-juice",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1613478223719-2ab802602423?w=800&q=80",
+    "description": "Cold-squeezed citrus juice containing sweet, high-yield pulp without artificial additives.",
+    "origin": "Abohar, Punjab",
+    "unit": "per 1L bottle"
+  },
+  {
+    "id": "bev-040",
+    "name": "Oolong Amber Mountain Tea",
+    "slug": "oolong-amber-mountain-tea",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=800&q=80",
+    "description": "Semi-oxidized whole leaf tea with a roasted floral aroma and deep sweet aftertaste.",
+    "origin": "Mirik Valley, Darjeeling",
+    "unit": "per 100g tin"
+  },
+  {
+    "id": "bev-041",
+    "name": "Jaljeera Refreshing Cooler Mix",
+    "slug": "jaljeera-refreshing-cooler-mix",
+    "category": "beverages",
+    "image": "/images/Jaljeera_Mix.jpg",
+    "description": "Tangy powdered concentrate made with roasted cumin, amchur, black salt, and dried mint.",
+    "origin": "Kolkata, West Bengal",
+    "unit": "per 200g jar"
+  },
+  {
+    "id": "bev-042",
+    "name": "Himalayan Pink Salt Lemon Soda Base",
+    "slug": "pink-salt-lemon-soda-base",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=800&q=80",
+    "description": "Electrolyte lemon cordial blended with mineral salt crystals for quick restorative sodas.",
+    "origin": "Barasat, North 24 Parganas",
+    "unit": "per 500ml bottle"
+  },
+  {
+    "id": "bev-043",
+    "name": "Espresso Blend Whole Coffee Beans",
+    "slug": "espresso-blend-whole-beans",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=800&q=80",
+    "description": "70% Arabica and 30% Robusta bean blend calibrated for espresso extraction with thick hazelnut crema.",
+    "origin": "Chikmagalur & Wayanad",
+    "unit": "per 1kg pack"
+  },
+  {
+    "id": "bev-044",
+    "name": "Raw Jamun Juice (Indian Blackberry)",
+    "slug": "raw-jamun-juice",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1558160074-4d7d8bdf4256?w=800&q=80",
+    "description": "Astringent, deep-purple natural juice pressed from ripe Java plum fruits with low glycemic index.",
+    "origin": "Midnapore district, West Bengal",
+    "unit": "per 500ml bottle"
+  },
+  {
+    "id": "bev-045",
+    "name": "Cinnamon Spiced Apple Tea",
+    "slug": "cinnamon-spiced-apple-tea",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=800&q=80",
+    "description": "Dehydrated mountain apple dices blended with Ceylon cinnamon bark and orthodox black tea.",
+    "origin": "Kullu, Himachal Pradesh",
+    "unit": "per 150g pack"
+  },
+  {
+    "id": "bev-046",
+    "name": "Fresh Sweet Pineapple Juice",
+    "slug": "fresh-sweet-pineapple-juice",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?w=800&q=80",
+    "description": "Unpasteurized juice cold-pressed from fragrant, mature Queen pineapples.",
+    "origin": "Siliguri, North Bengal",
+    "unit": "per 1L bottle"
+  },
+  {
+    "id": "bev-047",
+    "name": "Peppermint Infusion Herbal Tea",
+    "slug": "peppermint-infusion-herbal-tea",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?w=800&q=80",
+    "description": "Whole dried pungent peppermint leaves providing a crisp, cooling menthol palate cleanser.",
+    "origin": "Tarai region, Uttarakhand",
+    "unit": "per 75g tin"
+  },
+  {
+    "id": "bev-048",
+    "name": "Kaffir Lime & Ginger Sparkling Water",
+    "slug": "kaffir-lime-ginger-sparkling-water",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800&q=80",
+    "description": "Sugar-free carbonated spring water flavored with crushed kaffir lime leaves and fresh ginger.",
+    "origin": "Kolkata, West Bengal",
+    "unit": "per 330ml can"
+  },
+  {
+    "id": "bev-049",
+    "name": "White Tea Silver Needles",
+    "slug": "white-tea-silver-needles",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1563822249548-9a72b6353cd1?w=800&q=80",
+    "description": "Unopened downy silver leaf buds dried naturally under shade for a faint melon-sweet liqueur.",
+    "origin": "Rongbong Valley, Darjeeling",
+    "unit": "per 50g tin"
+  },
+  {
+    "id": "bev-050",
+    "name": "Solkadhi Ready Drink (Kokum & Coconut)",
+    "slug": "solkadhi-ready-drink",
+    "category": "beverages",
+    "image": "/images/Solkadhi.jpg",
+    "description": "Traditional coastal digestive drink made from freshly squeezed coconut milk and red kokum.",
+    "origin": "Goa / Konkan Coast",
+    "unit": "per 300ml bottle"
+  },
+  {
+    "id": "bev-051",
+    "name": "Pure Passion Fruit Cordial",
+    "slug": "pure-passion-fruit-cordial",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1536935338788-846bb9981813?w=800&q=80",
+    "description": "Intense tropical tart syrup pressed from purple passion fruits grown in north-eastern hills.",
+    "origin": "Aizawl, Mizoram",
+    "unit": "per 500ml bottle"
+  },
+  {
+    "id": "bev-052",
+    "name": "Decaf Organic Arabica Ground Coffee",
+    "slug": "decaf-organic-arabica-ground",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1587734195503-904fca47e0e9?w=800&q=80",
+    "description": "Swiss-water processed chemical-free decaffeinated coffee ground for pour-overs and drip machines.",
+    "origin": "Bababudangiri, Karnataka",
+    "unit": "per 250g pack"
+  },
+  {
+    "id": "bev-053",
+    "name": "Lychee Honey Nectar Drink",
+    "slug": "lychee-honey-nectar-drink",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1546173159-315724a31696?w=800&q=80",
+    "description": "Sweet, fragrant juice extracted from Shahi lychees combined with pure unheated apiary honey.",
+    "origin": "Muzaffarpur, Bihar",
+    "unit": "per 500ml bottle"
+  },
+  {
+    "id": "bev-054",
+    "name": "Earl Grey Citrus Bergamot Tea",
+    "slug": "earl-grey-bergamot-tea",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=800&q=80",
+    "description": "Full-bodied orthodox black tea leaves infused with natural cold-pressed oil of Italian bergamot.",
+    "origin": "Nilgiris, Tamil Nadu",
+    "unit": "per 150g tin"
+  },
+  {
+    "id": "bev-055",
+    "name": "Watermelon Mint Cold-Pressed Cooler",
+    "slug": "watermelon-mint-cooler",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1589733955941-5eeaf752f6dd?w=800&q=80",
+    "description": "Hydrating cold-pressed seedless red watermelon juice touched with garden mint and lime.",
+    "origin": "Nadia district, West Bengal",
+    "unit": "per 1L bottle"
+  },
+  {
+    "id": "bev-056",
+    "name": "Cardamom Spiced Hot Chocolate Mix",
+    "slug": "cardamom-spiced-hot-chocolate",
+    "category": "beverages",
+    "image": "/images/Hot_Chocolate_Mix.jpg",
+    "description": "Dutch-processed cocoa powder ground with single-origin cane sugar and crushed Idukki cardamom.",
+    "origin": "Idukki, Kerala",
+    "unit": "per 250g jar"
+  },
+  {
+    "id": "bev-057",
+    "name": "Fresh Ginger Lemon Fizz Base",
+    "slug": "fresh-ginger-lemon-fizz-base",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=800&q=80",
+    "description": "Spicy ginger extract blended with lemon juice, ready to serve topped with chilled sparkling water.",
+    "origin": "Barasat, North 24 Parganas",
+    "unit": "per 500ml bottle"
+  },
+  {
+    "id": "bev-058",
+    "name": "Dooars CTC Kadak Tea",
+    "slug": "dooars-ctc-kadak-tea",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1561336313-0bd5e0b27ec8?w=800&q=80",
+    "description": "Strong, brisk CTC tea grain formulated specifically to yield rich color and strength with boiled milk.",
+    "origin": "Dooars foothills, West Bengal",
+    "unit": "per 1kg pack"
+  },
+  {
+    "id": "bev-059",
+    "name": "Dragonfruit Lime Cooler",
+    "slug": "dragonfruit-lime-cooler",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1558160074-4d7d8bdf4256?w=800&q=80",
+    "description": "Vibrant magenta red-fleshed dragonfruit juice finished with a tart hint of gondhoraj lime juice.",
+    "origin": "East Midnapore, West Bengal",
+    "unit": "per 500ml bottle"
+  },
+  {
+    "id": "bev-060",
+    "name": "Green Jasmine Scented Tea Pearls",
+    "slug": "green-jasmine-scented-tea-pearls",
+    "category": "beverages",
+    "image": "https://images.unsplash.com/photo-1597481499750-3e6b22637e12?w=800&q=80",
+    "description": "Tender young green tea tips hand-rolled into pearls and scented overnight with fresh nocturnal jasmine blossoms.",
+    "origin": "Darjeeling foothills, West Bengal",
+    "unit": "per 100g tin"
+  }
+]

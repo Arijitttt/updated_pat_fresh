@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background-color: #e9edf2 !important;
+  color: #0f1b2b;
+  min-height: 100vh;
+  /* Distinct, visible culinary slate pattern */
+  background-image: 
+    radial-gradient(at 10% 20%, rgba(211, 47, 47, 0.08) 0px, transparent 45%),
+    radial-gradient(at 90% 80%, rgba(15, 27, 43, 0.08) 0px, transparent 45%),
+    radial-gradient(circle at 1px 1px, #b0b8c4 1.2px, transparent 0);
+  background-size: 100% 100%, 100% 100%, 28px 28px;
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Visible keyboard focus everywhere */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid #e2542d;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

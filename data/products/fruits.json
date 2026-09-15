@@ -1,0 +1,32 @@
+[
+  {
+    "id": "fruit-001",
+    "name": "Alphonso Mango",
+    "slug": "alphonso-mango",
+    "category": "fruits",
+    "image": "https://images.unsplash.com/photo-1553279768-865429fa0078?w=800&q=80",
+    "description": "A seasonal mango variety known for its saffron-coloured flesh and rich, non-fibrous sweetness.",
+    "origin": "Ratnagiri, Maharashtra",
+    "unit": "per dozen"
+  },
+  {
+    "id": "fruit-002",
+    "name": "Banana",
+    "slug": "banana",
+    "category": "fruits",
+    "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=800&q=80",
+    "description": "Everyday eating bananas, harvested ripe and sold in bunches.",
+    "origin": "Malda district, West Bengal",
+    "unit": "per dozen"
+  },
+  {
+    "id": "fruit-003",
+    "name": "Guava",
+    "slug": "guava",
+    "category": "fruits",
+    "image": "https://images.unsplash.com/photo-1536511132770-e5058c7e8c46?w=800&q=80",
+    "description": "Crisp, fragrant guavas with pale flesh, sold ripe for eating fresh.",
+    "origin": "Barasat, West Bengal",
+    "unit": "per kg"
+  }
+]

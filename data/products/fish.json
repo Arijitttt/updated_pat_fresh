@@ -1,0 +1,42 @@
+[
+  {
+    "id": "fish-001",
+    "name": "Rohu",
+    "slug": "rohu",
+    "category": "fish",
+    "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=800&q=80",
+    "description": "A freshwater carp common across Indian rivers and ponds, prized for its soft, flaky texture and mild flavour. Sold whole or cut into steaks.",
+    "origin": "West Bengal, India",
+    "unit": "per kg"
+  },
+  {
+    "id": "fish-002",
+    "name": "Katla",
+    "slug": "katla",
+    "category": "fish",
+    "image": "https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?w=800&q=80",
+    "description": "A large-bodied freshwater fish with firm, fatty flesh, well suited to curries and slow-cooked preparations.",
+    "origin": "Gangetic plains, India",
+    "unit": "per kg"
+  },
+  {
+    "id": "fish-003",
+    "name": "Hilsa",
+    "slug": "hilsa",
+    "category": "fish",
+    "image": "https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=800&q=80",
+    "description": "A seasonal river fish known for its rich, oily flesh and distinct flavour, traditionally cooked in mustard sauce.",
+    "origin": "Padma & Hooghly rivers",
+    "unit": "per kg"
+  },
+  {
+    "id": "fish-004",
+    "name": "Pomfret",
+    "slug": "pomfret",
+    "category": "fish",
+    "image": "https://images.unsplash.com/photo-1553557202-98a15606cb17?w=800&q=80",
+    "description": "A flat-bodied saltwater fish with delicate white flesh and few bones, popular for frying and grilling.",
+    "origin": "Arabian Sea coast",
+    "unit": "per kg"
+  }
+]

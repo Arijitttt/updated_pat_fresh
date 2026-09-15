@@ -1,0 +1,42 @@
+[
+  {
+    "id": "veg-001",
+    "name": "Potato",
+    "slug": "potato",
+    "category": "vegetables",
+    "image": "https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=800&q=80",
+    "description": "A staple root vegetable, firm and starchy, suited to boiling, frying, and long storage.",
+    "origin": "Hooghly district, West Bengal",
+    "unit": "per kg"
+  },
+  {
+    "id": "veg-002",
+    "name": "Tomato",
+    "slug": "tomato",
+    "category": "vegetables",
+    "image": "https://images.unsplash.com/photo-1592841200221-a6898f307baa?w=800&q=80",
+    "description": "Ripe, deep-red tomatoes with a good balance of acidity and sweetness, ideal for gravies and salads.",
+    "origin": "Nadia district, West Bengal",
+    "unit": "per kg"
+  },
+  {
+    "id": "veg-003",
+    "name": "Bitter Gourd",
+    "slug": "bitter-gourd",
+    "category": "vegetables",
+    "image": "https://images.unsplash.com/photo-1596097635121-14b63b7a0c1c?w=800&q=80",
+    "description": "A ridged green gourd with a distinctive bitter edge, commonly stir-fried or stuffed.",
+    "origin": "North 24 Parganas",
+    "unit": "per kg"
+  },
+  {
+    "id": "veg-004",
+    "name": "Pumpkin",
+    "slug": "pumpkin",
+    "category": "vegetables",
+    "image": "https://images.unsplash.com/photo-1570586437263-ab629fccc818?w=800&q=80",
+    "description": "Sweet, orange-fleshed pumpkin sold whole or by the piece, used in curries and lentil dishes.",
+    "origin": "Murshidabad district",
+    "unit": "per piece"
+  }
+]

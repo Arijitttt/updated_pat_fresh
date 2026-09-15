@@ -1,0 +1,42 @@
+[
+  {
+    "id": "choc-001",
+    "name": "Dark Chocolate 70%",
+    "slug": "dark-chocolate-70",
+    "category": "chocolates",
+    "image": "https://images.unsplash.com/photo-1548907040-4baa42d10919?w=800&q=80",
+    "description": "Rich and robust single-origin dark chocolate with earthy undertones and a smooth, balanced bitterness.",
+    "origin": "Idukki district, Kerala",
+    "unit": "per bar"
+  },
+  {
+    "id": "choc-002",
+    "name": "Milk Chocolate",
+    "slug": "milk-chocolate",
+    "category": "chocolates",
+    "image": "https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=800&q=80",
+    "description": "Creamy, melt-in-mouth milk chocolate crafted with whole dairy cream and caramel-sweet cocoa butter.",
+    "origin": "Ooty, Nilgiris, Tamil Nadu",
+    "unit": "per bar"
+  },
+  {
+    "id": "choc-003",
+    "name": "Roasted Almond Chocolate",
+    "slug": "roasted-almond-chocolate",
+    "category": "chocolates",
+    "image": "/images/Almond_Chocolate.jpg",
+    "description": "Crunchy dry-roasted Californian almonds enrobed in velvety semi-sweet chocolate bark.",
+    "origin": "Bengaluru, Karnataka",
+    "unit": "per 100g"
+  },
+  {
+    "id": "choc-004",
+    "name": "White Chocolate Vanilla Bean",
+    "slug": "white-chocolate-vanilla-bean",
+    "category": "chocolates",
+    "image": "https://images.unsplash.com/photo-1587132137056-bfbf0166836e?w=800&q=80",
+    "description": "Delicate cocoa butter infused with Madagascar bourbon vanilla specks and powdered cane sugar.",
+    "origin": "Pondicherry",
+    "unit": "per bar"
+  }
+]

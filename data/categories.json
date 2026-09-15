@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "fish",
+    "name": "Fish",
+    "description": "Freshwater and coastal fish, sourced daily from local markets.",
+    "file": "fish.json"
+  },
+  {
+    "slug": "vegetables",
+    "name": "Vegetables",
+    "description": "Seasonal vegetables sourced from growers across West Bengal.",
+    "file": "vegetables.json"
+  },
+  {
+    "slug": "fruits",
+    "name": "Fruits",
+    "description": "Fresh seasonal and everyday fruit.",
+    "file": "fruits.json"
+  },
+  {
+    "slug": "other",
+    "name": "Grocery",
+    "description": "Rice, oils, and pantry staples.",
+    "file": "other.json"
+  },
+  {
+    "slug": "chocolates",
+    "name": "Chocolates",
+    "description": "Bars and bites, from single-origin dark to milk and white chocolate.",
+    "file": "chocolates.json"
+  },
+  {
+    "slug":"beverages",
+    "name":"Beverages",
+    "description":"Tea, coffee, and other drinks.",
+    "file":"beverages.json"
+  }
+]
