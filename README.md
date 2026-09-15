@@ -1,34 +1,57 @@
-# Client Product Website
+# Fresh Supply Catalogue
 
-A static-data product catalogue built with Next.js (App Router) + TypeScript + Tailwind CSS.
-No database, backend, authentication, or checkout — visitors browse and read only.
+A modern, responsive product catalogue website built for a local food and grocery business. The website allows visitors to explore products by category, view detailed product information, and contact the business.
 
-## Stack
+The platform is designed primarily as an **information and product catalogue website**, not an e-commerce platform. There is no online payment or checkout system.
 
-- Next.js 14 (App Router), TypeScript, Tailwind CSS
-- Product data lives in `data/products/*.json`, split by category
-- Images served from an external CDN (Cloudinary, Unsplash, etc.) via `next/image`
+---
 
-## Running locally
+## 🌐 Overview
 
-```bash
-npm install
-npm run dev
-```
+Fresh Supply Catalogue provides an organized digital catalogue for products such as:
 
-Visit http://localhost:3000
+- 🐟 Fish & Seafood
+- 🥬 Vegetables
+- 🍎 Fruits
+- 🌾 Grocery & Grains
+- 🍫 Chocolates
+- 🥤 Beverages
 
-## Adding products
+The website focuses on presenting product information in a clean, modern and user-friendly interface.
 
-Open the relevant file in `data/products/` (e.g. `fish.json`) and append a new object
-with a unique `id` and `slug`. No rebuild step beyond a normal deploy is needed.
+Product information and images are maintained by the developer and can be updated manually whenever the business introduces new products.
 
-To add a brand-new category:
-1. Create `data/products/<category>.json` with an array of products.
-2. Add an entry to `data/categories.json` pointing at that file.
-3. Register the import in `lib/products.ts` (`productsByCategory`).
+---
 
-## Deployment
+## ✨ Features
 
-Push to GitHub and import the repo on Vercel. No environment variables or
-database connection are required — `.env.local` is a placeholder only.
+### 🏠 Modern Homepage
+
+- Hero section with business information
+- Product/category highlights
+- Recently listed products
+- Featured products
+- Responsive design
+- Smooth animations and transitions
+
+### 📦 Product Catalogue
+
+- Browse all available products
+- Filter products by category
+- Product search
+- Product cards with images
+- Product detail pages
+- Product descriptions and information
+- Origin/source information
+
+### 🗂️ Category Navigation
+
+Products are organized into dedicated categories:
+
+```text
+Fish & Seafood
+Vegetables
+Fruits
+Grocery & Grains
+Chocolates
+Beverages
