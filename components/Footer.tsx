@@ -125,7 +125,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/patfresh__/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs font-medium text-neutral-200 transition hover:border-pink-500/40 hover:bg-pink-500/10 hover:text-pink-400"
@@ -139,7 +139,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/people/Patfresh/61576476945548/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs font-medium text-neutral-200 transition hover:border-blue-500/40 hover:bg-blue-500/10 hover:text-blue-400"
