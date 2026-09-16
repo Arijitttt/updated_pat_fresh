@@ -11,7 +11,7 @@ import { getCategories } from "@/lib/categories";
 
 import FilterSidebar from "@/components/FilterSidebar";
 
-const PAGE_SIZE = 8;
+const PAGE_SIZE = 9;
 
 export default function ProductsPage() {
   const allProducts = useMemo(() => getProducts(), []);

@@ -4,6 +4,9 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { getSiteInfo } from "@/lib/site";
+import { CartProvider } from "@/context/CartContext";
+import RfqDrawer from "@/components/RfqDrawer";
+import RfqTrigger from "@/components/RfqTrigger";
 
 const grotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -34,9 +37,13 @@ export default function RootLayout({
       <body
         className={`${grotesk.variable} ${inter.variable} font-body antialiased flex min-h-screen flex-col bg-canvas`}
       >
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <CartProvider>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <RfqDrawer />
+          <RfqTrigger />
+        </CartProvider>
       </body>
     </html>
   );

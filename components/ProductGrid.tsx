@@ -13,7 +13,7 @@ const containerVariants: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.08,
+      staggerChildren: 0.06,
       delayChildren: 0.05,
     },
   },
@@ -22,13 +22,13 @@ const containerVariants: Variants = {
 const itemVariants: Variants = {
   hidden: {
     opacity: 0,
-    y: 20,
+    y: 18,
   },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.4,
+      duration: 0.35,
       ease: [0.25, 0.1, 0.25, 1.0],
     },
   },
@@ -39,9 +39,8 @@ export default function ProductGrid({ products }: ProductGridProps) {
     <motion.div
       variants={containerVariants}
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.15 }}
-      className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+      animate="visible"
+      className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3"
     >
       {products.map((product) => (
         <motion.div key={product.id || product.slug} variants={itemVariants}>
