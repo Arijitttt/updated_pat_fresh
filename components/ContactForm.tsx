@@ -64,7 +64,7 @@ export default function ContactForm() {
             <input
               type="text"
               required
-              placeholder="e.g. Rahul Sen"
+              placeholder="e.g. James Bond"
               className="mt-2 w-full rounded-xl border border-neutral-200 bg-neutral-50/50 px-4 py-3 text-sm text-neutral-800 outline-none transition duration-150 focus:border-[#d32f2f] focus:bg-white focus:ring-4 focus:ring-red-500/10"
             />
           </div>

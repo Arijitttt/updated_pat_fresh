@@ -107,13 +107,15 @@ export default function ContactPage() {
                     <p className="text-sm font-bold">Have a daily item list?</p>
                   </div>
                   <a
-                    href="https://wa.me/919830000000"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="shrink-0 rounded-xl bg-white px-3.5 py-2 text-xs font-bold text-emerald-800 shadow-sm transition hover:bg-emerald-50 active:scale-95"
-                  >
-                    Chat on WhatsApp
-                  </a>
+  href={`https://wa.me/918777352462?text=${encodeURIComponent(
+    "Hello PatFresh team, I would like to check today's stock availability and daily procurement rates for my kitchen."
+  )}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="shrink-0 rounded-xl bg-white px-3.5 py-2 text-xs font-bold text-emerald-800 shadow-sm transition hover:bg-emerald-50 active:scale-95"
+>
+  Chat on WhatsApp
+</a>
                 </div>
               </div>
             </div>
