@@ -1,42 +1,472 @@
 [
   {
-    "id": "choc-001",
-    "name": "Dark Chocolate 70%",
-    "slug": "dark-chocolate-70",
+    "id": "tenero-choco-hazelnut-filling-1kg",
+    "slug": "tenero-choco-hazelnut-filling-1kg",
+    "name": "Tenero Choco Hazelnut Filling",
     "category": "chocolates",
-    "image": "https://images.unsplash.com/photo-1548907040-4baa42d10919?w=800&q=80",
-    "description": "Rich and robust single-origin dark chocolate with earthy undertones and a smooth, balanced bitterness.",
-    "origin": "Idukki district, Kerala",
-    "unit": "per bar"
+    "packSize": "1 kg Tub",
+    "unit": "per tub",
+    "origin": "India",
+    "storage": "Cool & dry place (18°C - 20°C)",
+    "image": "/images/chocolates/2M Choco Hazelnut Filling.jpg",
+    "description": "Smooth and rich chocolate hazelnut spread and filling formulated for bakeries, waffles, croissants, and dessert layering.",
+    "specifications": {
+      "brand": "Tenero",
+      "type": "Nut Spread & Pastry Filling",
+      "dietary": "Vegetarian",
+      "netWeight": "1 kg"
+    }
   },
   {
-    "id": "choc-002",
-    "name": "Milk Chocolate",
-    "slug": "milk-chocolate",
+    "id": "2m-cocoa-powder-dp-33-1kg",
+    "slug": "2m-cocoa-powder-dp-33-1kg",
+    "name": "2M Professional Cocoa Powder DP-33",
     "category": "chocolates",
-    "image": "https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=800&q=80",
-    "description": "Creamy, melt-in-mouth milk chocolate crafted with whole dairy cream and caramel-sweet cocoa butter.",
-    "origin": "Ooty, Nilgiris, Tamil Nadu",
-    "unit": "per bar"
+    "packSize": "1 kg Pouch",
+    "unit": "per pouch",
+    "origin": "India",
+    "storage": "Store in a cool, moisture-free ambient room",
+    "image": "/images/chocolates/2M Cocoa Powder DP-33.jpg",
+    "description": "Professional-grade alkalized cocoa powder designed for high-end sponges, chocolate ganache, brownies, and beverage bases.",
+    "specifications": {
+      "brand": "2M Deliciously Yours",
+      "grade": "DP-33 Professional",
+      "dietary": "Vegetarian",
+      "netWeight": "1 kg"
+    }
   },
   {
-    "id": "choc-003",
-    "name": "Roasted Almond Chocolate",
-    "slug": "roasted-almond-chocolate",
+    "id": "2m-dark-brown-cocoa-powder-dp-40-1kg",
+    "slug": "2m-dark-brown-cocoa-powder-dp-40-1kg",
+    "name": "2M Dark Brown Cocoa Powder DP-40",
     "category": "chocolates",
-    "image": "/images/Almond_Chocolate.jpg",
-    "description": "Crunchy dry-roasted Californian almonds enrobed in velvety semi-sweet chocolate bark.",
-    "origin": "Bengaluru, Karnataka",
-    "unit": "per 100g"
+    "packSize": "1 kg Pouch",
+    "unit": "per pouch",
+    "origin": "India",
+    "storage": "Store in a cool, moisture-free ambient room",
+    "image": "/images/chocolates/2M Dark Brown Cocoa Powder DP-40 (1KG).jpg",
+    "description": "Deep, intense alkalized dark cocoa powder delivering premium dark color and rich, bittersweet flavor profiles for artisan baked goods.",
+    "specifications": {
+      "brand": "2M Deliciously Yours",
+      "grade": "DP-40 Dark Brown",
+      "dietary": "Vegetarian",
+      "netWeight": "1 kg"
+    }
   },
   {
-    "id": "choc-004",
-    "name": "White Chocolate Vanilla Bean",
-    "slug": "white-chocolate-vanilla-bean",
+    "id": "2m-dark-chocolate-slab-46-5-500g",
+    "slug": "2m-dark-chocolate-slab-46-5-500g",
+    "name": "2M Dark Chocolate Slab 46.5%",
     "category": "chocolates",
-    "image": "https://images.unsplash.com/photo-1587132137056-bfbf0166836e?w=800&q=80",
-    "description": "Delicate cocoa butter infused with Madagascar bourbon vanilla specks and powdered cane sugar.",
-    "origin": "Pondicherry",
-    "unit": "per bar"
+    "packSize": "500g Slab",
+    "unit": "per slab",
+    "origin": "Ghana Cocoa Beans (Processed in India)",
+    "storage": "15°C - 20°C Temperature Controlled",
+    "image": "/images/chocolates/2M Dark Chocolate 46.5.jpg",
+    "description": "Pure dark couverture-grade chocolate with 46.5% cocoa solids crafted with premium Ghana cocoa beans for pralines, mousses, and enrobing.",
+    "specifications": {
+      "brand": "2M Deliciously Yours",
+      "cocoaSolids": "46.5%",
+      "dietary": "Vegetarian",
+      "netWeight": "500g"
+    }
+  },
+  {
+    "id": "2m-dark-chocolate-slab-57-500g",
+    "slug": "2m-dark-chocolate-slab-57-500g",
+    "name": "2M Dark Chocolate Slab 57%",
+    "category": "chocolates",
+    "packSize": "500g Slab",
+    "unit": "per slab",
+    "origin": "Ghana Cocoa Beans (Processed in India)",
+    "storage": "15°C - 20°C Temperature Controlled",
+    "image": "/images/chocolates/2M Dark Chocolate 57.jpg",
+    "description": "Balanced semi-sweet dark chocolate slab with 57% cocoa solids from single-origin Ghana beans. Excellent melting properties and snap.",
+    "specifications": {
+      "brand": "2M Deliciously Yours",
+      "cocoaSolids": "57%",
+      "dietary": "Vegetarian",
+      "netWeight": "500g"
+    }
+  },
+  {
+    "id": "2m-dark-chocolate-slab-72-500g",
+    "slug": "2m-dark-chocolate-slab-72-500g",
+    "name": "2M Dark Chocolate Slab 72%",
+    "category": "chocolates",
+    "packSize": "500g Slab",
+    "unit": "per slab",
+    "origin": "Ghana Cocoa Beans (Processed in India)",
+    "storage": "15°C - 20°C Temperature Controlled",
+    "image": "/images/chocolates/2M Tenero Dark Chocolate 72.jpg",
+    "description": "High-percentage bittersweet artisan dark chocolate slab boasting 72% Ghana cocoa solids for gourmet patisserie and signature desserts.",
+    "specifications": {
+      "brand": "2M Deliciously Yours",
+      "cocoaSolids": "72%",
+      "dietary": "Vegetarian",
+      "netWeight": "500g"
+    }
+  },
+  {
+    "id": "2m-dark-compound-chips-1kg",
+    "slug": "2m-dark-compound-chips-1kg",
+    "name": "2M Dark Compound Chocolate Chips",
+    "category": "chocolates",
+    "packSize": "1 kg Pouch",
+    "unit": "per pouch",
+    "origin": "India",
+    "storage": "Cool & dry place (under 22°C)",
+    "image": "/images/chocolates/2M Dark Compound Chocochips.jpg",
+    "description": "Bake-stable dark compound chocolate drops designed to maintain shape and texture inside cookies, muffins, cakes, and ice cream toppings.",
+    "specifications": {
+      "brand": "2M Deliciously Yours",
+      "type": "Bake-Stable Chips",
+      "dietary": "Vegetarian",
+      "netWeight": "1 kg"
+    }
+  },
+  {
+    "id": "2m-classic-dark-compound-slab-500g",
+    "slug": "2m-classic-dark-compound-slab-500g",
+    "name": "2M Classic Dark Compound Slab",
+    "category": "chocolates",
+    "packSize": "500g Slab",
+    "unit": "per slab",
+    "origin": "India",
+    "storage": "Cool & dry place",
+    "image": "/images/chocolates/2M Dark Compound Classic.jpg",
+    "description": "Standard commercial dark compound slab with high tolerance to tropical temperatures. No tempering required; melts quickly for glazing and molded figures.",
+    "specifications": {
+      "brand": "2M Deliciously Yours",
+      "variant": "Classic",
+      "dietary": "Vegetarian",
+      "netWeight": "500g"
+    }
+  },
+  {
+    "id": "2m-dark-compound-cp16-slab-500g",
+    "slug": "2m-dark-compound-cp16-slab-500g",
+    "name": "2M Dark Compound CP-16 Slab",
+    "category": "chocolates",
+    "packSize": "500g Slab",
+    "unit": "per slab",
+    "origin": "India",
+    "storage": "Cool & dry place",
+    "image": "/images/chocolates/2M Dark Compound CP-16.jpg",
+    "description": "Specialized CP-16 compound slab formulated for high gloss finishes, flexible enrobing, and rapid setting times in commercial kitchens.",
+    "specifications": {
+      "brand": "2M Deliciously Yours",
+      "variant": "CP-16 Grade",
+      "dietary": "Vegetarian",
+      "netWeight": "500g"
+    }
+  },
+  {
+    "id": "2m-dark-compound-royal-slab-500g",
+    "slug": "2m-dark-compound-royal-slab-500g",
+    "name": "2M Dark Compound Royal Slab",
+    "category": "chocolates",
+    "packSize": "500g Slab",
+    "unit": "per slab",
+    "origin": "India",
+    "storage": "Cool & dry place",
+    "image": "/images/chocolates/2M Dark Compound Royal.jpg",
+    "description": "Premium Royal recipe dark compound offering superior cocoa aroma, silky mouthfeel, and rich dark coloration for gourmet confectioneries.",
+    "specifications": {
+      "brand": "2M Deliciously Yours",
+      "variant": "Royal",
+      "dietary": "Vegetarian",
+      "netWeight": "500g"
+    }
+  },
+  {
+    "id": "2m-drinking-chocolate-powder",
+    "slug": "2m-drinking-chocolate-powder",
+    "name": "2M Drinking Chocolate Powder",
+    "category": "chocolates",
+    "packSize": "Pouch / Jar",
+    "unit": "per pack",
+    "origin": "India",
+    "storage": "Store in a cool, dry place",
+    "image": "/images/chocolates/2M Drinking Chocolate Powder.jpeg",
+    "description": "Rich, indulgent drinking chocolate blend formulated for artisan hot chocolates, milkshakes, and beverage counters.",
+    "specifications": {
+      "brand": "2M Deliciously Yours",
+      "dietary": "Vegetarian",
+      "usage": "Hot & Cold Beverage Base"
+    }
+  },
+  {
+    "id": "2m-hazelnut-paste",
+    "slug": "2m-hazelnut-paste",
+    "name": "2M Roasted Hazelnut Paste",
+    "category": "chocolates",
+    "packSize": "1 kg Tub",
+    "unit": "per tub",
+    "origin": "India",
+    "storage": "Cool & dry place (18°C - 20°C)",
+    "image": "/images/chocolates/2M Hazel Nut Paste.jpg",
+    "description": "Pure roasted hazelnut paste ideal for flavoring gelato, buttercream, praline fillings, and gourmet ganache.",
+    "specifications": {
+      "brand": "2M Deliciously Yours",
+      "dietary": "Vegetarian",
+      "application": "Pastry & Confectionery Core"
+    }
+  },
+  {
+    "id": "2m-mango-compound-slab",
+    "slug": "2m-mango-compound-slab",
+    "name": "2M Mango Flavored Compound Slab",
+    "category": "chocolates",
+    "packSize": "500g Slab",
+    "unit": "per slab",
+    "origin": "India",
+    "storage": "Cool & dry place",
+    "image": "/images/chocolates/2M Mango Compound.jpg",
+    "description": "Vibrant mango-flavored confectionery compound for colorful bakery drip cakes, tropical ganache, and molded decors.",
+    "specifications": {
+      "brand": "2M Deliciously Yours",
+      "flavor": "Mango",
+      "dietary": "Vegetarian"
+    }
+  },
+  {
+    "id": "2m-orange-compound-slab",
+    "slug": "2m-orange-compound-slab",
+    "name": "2M Orange Flavored Compound Slab",
+    "category": "chocolates",
+    "packSize": "500g Slab",
+    "unit": "per slab",
+    "origin": "India",
+    "storage": "Cool & dry place",
+    "image": "/images/chocolates/2M Orange Compound.jpg",
+    "description": "Citrus-infused orange compound slab providing zesty aroma, bold hue, and quick melting properties for bakery accents.",
+    "specifications": {
+      "brand": "2M Deliciously Yours",
+      "flavor": "Orange",
+      "dietary": "Vegetarian"
+    }
+  },
+  {
+    "id": "2m-strawberry-compound-slab",
+    "slug": "2m-strawberry-compound-slab",
+    "name": "2M Strawberry Flavored Compound Slab",
+    "category": "chocolates",
+    "packSize": "500g Slab",
+    "unit": "per slab",
+    "origin": "India",
+    "storage": "Cool & dry place",
+    "image": "/images/chocolates/2M Strawberry Compound.jpg",
+    "description": "Delicate pink strawberry-flavored confectionery compound suited for pastry dipping, coatings, and festive decorations.",
+    "specifications": {
+      "brand": "2M Deliciously Yours",
+      "flavor": "Strawberry",
+      "dietary": "Vegetarian"
+    }
+  },
+  {
+    "id": "2m-milk-choco-filling",
+    "slug": "2m-milk-choco-filling",
+    "name": "2M Milk Choco Pastry Filling",
+    "category": "chocolates",
+    "packSize": "Tub / Bucket",
+    "unit": "per tub",
+    "origin": "India",
+    "storage": "Cool & dry storage",
+    "image": "/images/chocolates/2M Milk Choco Filling.jpeg",
+    "description": "Creamy milk chocolate filling with high stability for piped pastry centers, doughnut injections, and layered cakes.",
+    "specifications": {
+      "brand": "2M Deliciously Yours",
+      "type": "Milk Chocolate Filling",
+      "dietary": "Vegetarian"
+    }
+  },
+  {
+    "id": "2m-white-choco-filling",
+    "slug": "2m-white-choco-filling",
+    "name": "2M White Choco Pastry Filling",
+    "category": "chocolates",
+    "packSize": "Tub / Bucket",
+    "unit": "per tub",
+    "origin": "India",
+    "storage": "Cool & dry storage",
+    "image": "/images/chocolates/2M White Choco Filling.jpeg",
+    "description": "Velvety white chocolate spreadable filling crafted for patisserie center injections, glazing, and dessert tarts.",
+    "specifications": {
+      "brand": "2M Deliciously Yours",
+      "type": "White Chocolate Filling",
+      "dietary": "Vegetarian"
+    }
+  },
+  {
+    "id": "2m-milk-chocolate-slab-37",
+    "slug": "2m-milk-chocolate-slab-37",
+    "name": "2M Milk Chocolate Slab 37%",
+    "category": "chocolates",
+    "packSize": "500g Slab",
+    "unit": "per slab",
+    "origin": "India",
+    "storage": "15°C - 20°C Temperature Controlled",
+    "image": "/images/chocolates/2M Milk Chocolate 37.jpg",
+    "description": "Smooth, creamy couverture-grade milk chocolate with 37% cocoa solids, delivering gentle caramel notes and high gloss snap.",
+    "specifications": {
+      "brand": "2M Deliciously Yours",
+      "cocoaSolids": "37%",
+      "dietary": "Vegetarian"
+    }
+  },
+  {
+    "id": "2m-milk-compound-slab",
+    "slug": "2m-milk-compound-slab",
+    "name": "2M Classic Milk Compound Slab",
+    "category": "chocolates",
+    "packSize": "500g Slab",
+    "unit": "per slab",
+    "origin": "India",
+    "storage": "Cool & dry place",
+    "image": "/images/chocolates/2M Milk Compound.jpg",
+    "description": "Easy-melting milk compound slab designed for economical commercial dipping, moulding, and bakery decorations without tempering.",
+    "specifications": {
+      "brand": "2M Deliciously Yours",
+      "variant": "Classic Milk",
+      "dietary": "Vegetarian"
+    }
+  },
+  {
+    "id": "2m-milk-compound-royal-slab",
+    "slug": "2m-milk-compound-royal-slab",
+    "name": "2M Milk Compound Royal Slab",
+    "category": "chocolates",
+    "packSize": "500g Slab",
+    "unit": "per slab",
+    "origin": "India",
+    "storage": "Cool & dry place",
+    "image": "/images/chocolates/2M Milk Compound Royal.jpg",
+    "description": "High-tier milk compound with refined dairy richness and enhanced gloss for bakery enrobing and fine chocolate garnishes.",
+    "specifications": {
+      "brand": "2M Deliciously Yours",
+      "variant": "Royal Milk",
+      "dietary": "Vegetarian"
+    }
+  },
+  {
+    "id": "2m-white-compound-slab",
+    "slug": "2m-white-compound-slab",
+    "name": "2M Classic White Compound Slab",
+    "category": "chocolates",
+    "packSize": "500g Slab",
+    "unit": "per slab",
+    "origin": "India",
+    "storage": "Cool & dry place",
+    "image": "/images/chocolates/2M White Compound.jpg",
+    "description": "Standard commercial white compound slab with smooth melting characteristics and clean vanilla dairy sweetness.",
+    "specifications": {
+      "brand": "2M Deliciously Yours",
+      "variant": "Classic White",
+      "dietary": "Vegetarian"
+    }
+  },
+  {
+    "id": "2m-white-compound-royal-slab",
+    "slug": "2m-white-compound-royal-slab",
+    "name": "2M White Compound Royal Slab",
+    "category": "chocolates",
+    "packSize": "500g Slab",
+    "unit": "per slab",
+    "origin": "India",
+    "storage": "Cool & dry place",
+    "image": "/images/chocolates/2M White Compound Royal.jpg",
+    "description": "Superior white compound slab engineered for maximum opacity, creamy mouthfeel, and silky dipping performance.",
+    "specifications": {
+      "brand": "2M Deliciously Yours",
+      "variant": "Royal White",
+      "dietary": "Vegetarian"
+    }
+  },
+  {
+    "id": "2m-white-compound-chips-1kg",
+    "slug": "2m-white-compound-chips-1kg",
+    "name": "2M White Compound Chocolate Chips",
+    "category": "chocolates",
+    "packSize": "1 kg Pouch",
+    "unit": "per pouch",
+    "origin": "India",
+    "storage": "Cool & dry place (under 22°C)",
+    "image": "/images/chocolates/2M White Compound Chips.jpg",
+    "description": "Bake-stable sweet white chocolate drops formulated to hold distinct structure in cookies, blondies, and dessert garnishes.",
+    "specifications": {
+      "brand": "2M Deliciously Yours",
+      "type": "Bake-Stable White Chips",
+      "dietary": "Vegetarian",
+      "netWeight": "1 kg"
+    }
+  },
+  {
+    "id": "2m-tenero-dark-chocolate-72",
+    "slug": "2m-tenero-dark-chocolate-72",
+    "name": "2M Tenero Dark Chocolate 72%",
+    "category": "chocolates",
+    "packSize": "Slab / Bar",
+    "unit": "per slab",
+    "origin": "India",
+    "storage": "15°C - 20°C Temperature Controlled",
+    "image": "/images/chocolates/2M Tenero Dark Chocolate 72.jpg",
+    "description": "Premium 72% dark chocolate from the Tenero reserve line, featuring bold cocoa intensity and refined aromatic depth.",
+    "specifications": {
+      "brand": "2M Tenero",
+      "cocoaSolids": "72%",
+      "dietary": "Vegetarian"
+    }
+  },
+  {
+    "id": "2m-tenero-dark-chocolate-57",
+    "slug": "2m-tenero-dark-chocolate-57",
+    "name": "2M Tenero Dark Chocolate 57%",
+    "category": "chocolates",
+    "packSize": "Slab / Bar",
+    "unit": "per slab",
+    "origin": "India",
+    "storage": "15°C - 20°C Temperature Controlled",
+    "image": "/images/chocolates/2M Tenero Dark Chocolate 57.jpg",
+    "description": "Balanced semi-sweet 57% dark chocolate slab suited for fine desserts, mousses, and confection enrobing.",
+    "specifications": {
+      "brand": "2M Tenero",
+      "cocoaSolids": "57%",
+      "dietary": "Vegetarian"
+    }
+  },
+  {
+    "id": "2m-tenero-milk-chocolate-37",
+    "slug": "2m-tenero-milk-chocolate-37",
+    "name": "2M Tenero Milk Chocolate 37%",
+    "category": "chocolates",
+    "packSize": "Slab / Bar",
+    "unit": "per slab",
+    "origin": "India",
+    "storage": "15°C - 20°C Temperature Controlled",
+    "image": "/images/chocolates/2M Tenero Milk Chocolate 37.jpg",
+    "description": "Silky European-style milk chocolate formulated with 37% cocoa solids and balanced dairy sweetness.",
+    "specifications": {
+      "brand": "2M Tenero",
+      "cocoaSolids": "37%",
+      "dietary": "Vegetarian"
+    }
+  },
+  {
+    "id": "2m-tenero-white-chocolate-28",
+    "slug": "2m-tenero-white-chocolate-28",
+    "name": "2M Tenero White Chocolate 28%",
+    "category": "chocolates",
+    "packSize": "Slab / Bar",
+    "unit": "per slab",
+    "origin": "India",
+    "storage": "15°C - 20°C Temperature Controlled",
+    "image": "/images/chocolates/2M Tenero White Chocolate 28.jpg",
+    "description": "Pure white couverture chocolate crafted with 28% cocoa butter for silky mouthfeel and premium dessert decorations.",
+    "specifications": {
+      "brand": "2M Tenero",
+      "cocoaButter": "28%",
+      "dietary": "Vegetarian"
+    }
   }
 ]

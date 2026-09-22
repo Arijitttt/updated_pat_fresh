@@ -1,29 +1,5 @@
 [
   {
-    "slug": "fish",
-    "name": "Fish",
-    "description": "Freshwater and coastal fish, sourced daily from local markets.",
-    "file": "fish.json"
-  },
-  {
-    "slug": "vegetables",
-    "name": "Vegetables",
-    "description": "Seasonal vegetables sourced from growers across West Bengal.",
-    "file": "vegetables.json"
-  },
-  {
-    "slug": "fruits",
-    "name": "Fruits",
-    "description": "Fresh seasonal and everyday fruit.",
-    "file": "fruits.json"
-  },
-  {
-    "slug": "other",
-    "name": "Grocery",
-    "description": "Rice, oils, and pantry staples.",
-    "file": "other.json"
-  },
-  {
     "slug": "chocolates",
     "name": "Chocolates",
     "description": "Bars and bites, from single-origin dark to milk and white chocolate.",
@@ -34,5 +10,34 @@
     "name":"Beverages",
     "description":"Tea, coffee, and other drinks.",
     "file":"beverages.json"
+  },
+  {
+    "slug": "dairy",
+    "name": "Dairy & Non-Dairy",
+    "description": "Commercial fresh cream, butter, cheese blocks, paneer, and plant-based non-dairy whipping creams for kitchens and bakeries.",
+    "file": "dairy.json"
+  },
+  {
+    "slug": "frozen",
+    "name": "Frozen Foods",
+    "tagline": "Fries, snacks, green peas & ready-to-fry",
+    "description": "Frozen vegetables, fruits, and ready-to-cook products.",
+    "image": "https://images.unsplash.com/photo-1576107232684-1279f3908594?w=600&q=80",
+    "file": "frozen.json"
+  },
+  {
+    "slug": "pantry",
+    "name": "Pantry",
+    "description": "Commercial cooking oils, bulk culinary sauces, whole spices, seasonings, vinegars, and dry kitchen staples for restaurants and cloud kitchens.",
+    "image": "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&q=80",
+    "file": "pantry.json"
+  },
+  {
+    "slug": "ready-to-cook",
+    "name": "Ready-to-Cook",
+    "tagline": "Gravy bases, marinated cuts & prepped mixes",
+    "description": "Commercial onion-tomato gravies, makhani bases, marinated meats, paneer tikka preps, and par-cooked food solutions for fast-turnaround commercial kitchens.",
+    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80",
+    "file": "ready-to-cook.json"
   }
 ]

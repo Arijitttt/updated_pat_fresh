@@ -1,20 +1,24 @@
-import fish from "@/data/products/fish.json";
 import vegetables from "@/data/products/vegetables.json";
 import fruits from "@/data/products/fruits.json";
 import other from "@/data/products/other.json";
 import chocolates from "@/data/products/chocolates.json";
 import beverages from "@/data/products/beverages.json";
+import dairyProducts from "@/data/products/dairy.json";
+import frozenProducts from "@/data/products/frozen.json";
+import pantryProducts from "@/data/products/pantry.json";
+import readyToCookProducts from "@/data/products/ready-to-cook.json";
 import type { Product } from "@/types/product";
 
 // Central registry: add a new category file above and register it here.
 // Nothing else in the app needs to change.
 const productsByCategory: Record<string, Product[]> = {
-  fish,
-  vegetables,
-  fruits,
-  other,
+  
   chocolates,
-  beverages
+  beverages,
+  dairy: dairyProducts,
+  frozen: frozenProducts,
+  pantry: pantryProducts,
+  "ready-to-cook": readyToCookProducts,
 };
 
 const allProducts: Product[] = Object.values(productsByCategory).flat();

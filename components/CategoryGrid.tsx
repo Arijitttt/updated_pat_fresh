@@ -14,22 +14,6 @@ export interface CategoryItem {
 }
 
 const CATEGORY_FALLBACK_IMAGES: Record<string, { img: string; tag: string }> = {
-  fish: {
-    img: "https://images.unsplash.com/photo-1534483509719-3feaee7c30da?w=600&q=80",
-    tag: "Fresh catch & fillets",
-  },
-  vegetables: {
-    img: "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80",
-    tag: "Farm-direct produce",
-  },
-  fruits: {
-    img: "https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=600&q=80",
-    tag: "Seasonal & exotic",
-  },
-  grocery: {
-    img: "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&q=80",
-    tag: "Bulk staple essentials",
-  },
   chocolates: {
     img: "https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=600&q=80",
     tag: "Gourmet confectionery",
@@ -38,15 +22,32 @@ const CATEGORY_FALLBACK_IMAGES: Record<string, { img: string; tag: string }> = {
     img: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600&q=80",
     tag: "Teas, syrups & bases",
   },
+  dairy: {
+  img: "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=600&q=80",
+  tag: "Milk, creams, cheeses & plant bases",
+},
+frozen: {
+  img: "https://images.unsplash.com/photo-1576107232684-1279f3908594?w=600&q=80",
+  tag: "Fries, snacks & IQF vegetables",
+},
+pantry: {
+  img: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&q=80",
+  tag: "Oils, sauces, spices & seasonings",
+},
+"ready-to-cook": {
+  img: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80",
+  tag: "Gravy bases, marinated cuts & prepped preps",
+},
 };
 
 const defaultCategories: CategoryItem[] = [
-  { name: "Fish & Seafood", slug: "fish" },
-  { name: "Vegetables", slug: "vegetables" },
-  { name: "Fruits", slug: "fruits" },
-  { name: "Grocery & Grains", slug: "grocery" },
+
   { name: "Chocolates", slug: "chocolates" },
   { name: "Beverages", slug: "beverages" },
+  { name: "Dairy & Non-Dairy", slug: "dairy" },
+  { name: "Frozen Items", slug: "frozen" },
+  { name: "Pantry", slug: "pantry" },
+  { name: "Ready to Cook", slug: "ready-to-cook" },
 ];
 
 const containerVariants: Variants = {

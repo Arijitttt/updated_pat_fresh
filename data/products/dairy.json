@@ -1,0 +1,70 @@
+[
+  {
+    "id": "dairy-non-dairy-whipping-cream-1l",
+    "slug": "dairy-non-dairy-whipping-cream-1l",
+    "name": "Non-Dairy Whipping Cream",
+    "category": "dairy",
+    "packSize": "1 Litre Tetra Pack",
+    "unit": "per pack",
+    "origin": "India",
+    "storage": "-18°C Frozen",
+    "image": "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=600&q=80",
+    "description": "High-stability non-dairy whipping cream designed for cake icing, mousses, and pastry decorations with superior overrun.",
+    "specifications": {
+      "type": "Non-Dairy / Plant Based",
+      "application": "Bakery Icing & Toppings",
+      "dietary": "Vegetarian",
+      "netVolume": "1 L"
+    }
+  },
+  {
+    "id": "dairy-cooking-cream-1l",
+    "slug": "dairy-cooking-cream-1l",
+    "name": "Dairy Cooking Cream 25%",
+    "category": "dairy",
+    "packSize": "1 Litre Pack",
+    "unit": "per pack",
+    "origin": "India",
+    "storage": "Refrigerated (2°C - 4°C)",
+    "image": "https://images.unsplash.com/photo-1628088062854-d1870b4553da?w=600&q=80",
+    "description": "Rich dairy cooking cream for pasta sauces, gravies, soups, and continental hot kitchen culinary bases.",
+    "specifications": {
+      "fatContent": "25% Dairy Fat",
+      "dietary": "Vegetarian",
+      "netVolume": "1 L"
+    }
+  },
+  {
+    "id": "dairy-fresh-paneer-bulk",
+    "slug": "dairy-fresh-paneer-bulk",
+    "name": "Commercial Malai Paneer Block",
+    "category": "dairy",
+    "packSize": "1 kg / 5 kg Block",
+    "unit": "per kg",
+    "origin": "Local Dairies (West Bengal)",
+    "storage": "2°C - 4°C Chilled",
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=600&q=80",
+    "description": "Fresh soft malai paneer with high moisture retention, ideal for tandoori tikka, curries, and bulk commercial kitchen prep.",
+    "specifications": {
+      "type": "Fresh Cottage Cheese",
+      "dietary": "Vegetarian"
+    }
+  },
+  {
+    "id": "dairy-mozzarella-cheese-block-2kg",
+    "slug": "dairy-mozzarella-cheese-block-2kg",
+    "name": "Mozzarella Pizza Cheese Block",
+    "category": "dairy",
+    "packSize": "2 kg Block",
+    "unit": "per block",
+    "origin": "India",
+    "storage": "-18°C Frozen / 2°C - 4°C Chilled",
+    "image": "https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=600&q=80",
+    "description": "High-melt mozzarella cheese block offering superior stretch, blister color, and oil control for commercial pizzerias.",
+    "specifications": {
+      "form": "Solid Block",
+      "application": "Pizza & Baked Dishes",
+      "dietary": "Vegetarian"
+    }
+  }
+]

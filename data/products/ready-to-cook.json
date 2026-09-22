@@ -1,0 +1,88 @@
+[
+  {
+    "id": "rtc-makhani-gravy-base-1kg",
+    "slug": "rtc-makhani-gravy-base-1kg",
+    "name": "Commercial Makhani Gravy Base",
+    "category": "ready-to-cook",
+    "packSize": "1 kg Retort Pouch",
+    "unit": "per pack",
+    "origin": "India",
+    "storage": "Store in a cool, dry place (Refrigerate after opening)",
+    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80",
+    "description": "Rich cashew and butter-infused tomato gravy base. Ready to heat and finish with cream for butter chicken, paneer makhani, and dal makhani.",
+    "specifications": {
+      "format": "Ready Gravy Base",
+      "dietary": "Vegetarian",
+      "shelfLife": "12 Months Retort Pack",
+      "netWeight": "1 kg"
+    }
+  },
+  {
+    "id": "rtc-bhuna-onion-tomato-masala-1kg",
+    "slug": "rtc-bhuna-onion-tomato-masala-1kg",
+    "name": "Bhuna Onion-Tomato Masala Paste",
+    "category": "ready-to-cook",
+    "packSize": "1 kg Retort Pouch",
+    "unit": "per pack",
+    "origin": "India",
+    "storage": "Cool & dry storage",
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=600&q=80",
+    "description": "Slow-cooked golden onion and tomato masala base, cutting prep time by 70% for curries, handi dishes, and kadai gravies in cloud kitchens.",
+    "specifications": {
+      "prepTimeSaved": "Approx. 45 mins",
+      "dietary": "Vegetarian",
+      "netWeight": "1 kg"
+    }
+  },
+  {
+    "id": "rtc-marinated-paneer-tikka-precut",
+    "slug": "rtc-marinated-paneer-tikka-precut",
+    "name": "Pre-Marinated Tandoori Paneer Tikka",
+    "category": "ready-to-cook",
+    "packSize": "1 kg Vacuum Pack",
+    "unit": "per kg",
+    "origin": "West Bengal, India",
+    "storage": "2°C - 4°C Chilled",
+    "image": "https://images.unsplash.com/photo-1567184109411-4779e018cbe5?w=600&q=80",
+    "description": "Fresh malai paneer cubes coated in authentic tandoori mustard oil and curd marinade, ready for skewers, tandoor firing, or pan searing.",
+    "specifications": {
+      "form": "Pre-Cut & Marinated Cubes",
+      "dietary": "Vegetarian",
+      "leadTime": "Fresh Morning Dispatch"
+    }
+  },
+  {
+    "id": "rtc-ginger-garlic-paste-bulk-5kg",
+    "slug": "rtc-ginger-garlic-paste-bulk-5kg",
+    "name": "Commercial Ginger-Garlic Paste (50:50 Blend)",
+    "category": "ready-to-cook",
+    "packSize": "5 kg Bucket / Pouch",
+    "unit": "per bucket",
+    "origin": "India",
+    "storage": "Cool, dry ambient storage (Chilled after opening)",
+    "image": "https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=600&q=80",
+    "description": "Consistent 50:50 ground ginger and garlic blend without artificial aromas, formulated for commercial kitchen bulk seasoning.",
+    "specifications": {
+      "ratio": "50% Ginger : 50% Garlic",
+      "dietary": "Vegetarian",
+      "netWeight": "5 kg"
+    }
+  },
+  {
+    "id": "rtc-par-cooked-frozen-paratha-20pcs",
+    "slug": "rtc-par-cooked-frozen-paratha-20pcs",
+    "name": "Par-Cooked Malabar Paratha (Pack of 20)",
+    "category": "ready-to-cook",
+    "packSize": "20 Pieces / Pack (1.6 kg)",
+    "unit": "per pack",
+    "origin": "India",
+    "storage": "-18°C Deep Frozen",
+    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80",
+    "description": "Layered, flaky Malabar parathas pre-cooked on cast iron. Requires only 2 minutes of skillet reheating with butter or ghee before serving.",
+    "specifications": {
+      "pieceCount": "20 Parathas",
+      "dietary": "Vegetarian",
+      "shelfLife": "12 Months at -18°C"
+    }
+  }
+]
