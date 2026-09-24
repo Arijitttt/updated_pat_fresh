@@ -35,9 +35,12 @@ function ProductsCatalogContent() {
         category === "all" ||
         product.category?.toLowerCase() === activeCat;
 
-      // 2. Subcategory check (Active for both Chocolates and Groceries)
+      // 2. Subcategory check (Active for Chocolates, Groceries, and Dairy / Cheese)
       const hasSubcategories =
-        activeCat === "chocolates" || activeCat === "groceries";
+        activeCat === "chocolates" ||
+        activeCat === "groceries" ||
+        activeCat === "dairy" ||
+        activeCat === "dairy-non-dairy";
 
       const matchesSubcategory =
         !hasSubcategories ||
@@ -83,7 +86,7 @@ function ProductsCatalogContent() {
                 Commercial Food Supplies
               </h1>
               <p className="mt-2 text-xs text-white/70 sm:text-sm">
-                Bulk ingredients, seafood, frozen meats, and grocery essentials across Kolkata.
+                Bulk ingredients, seafood, cheese, dairy, and grocery essentials across Kolkata.
               </p>
             </div>
 
@@ -116,7 +119,7 @@ function ProductsCatalogContent() {
                 setPage(1);
               }}
               onSelectSubcategory={(subSlug) => {
-                setSubcategory(subSlug); // Switches "all", "imported", "local", "2m", "tenero"
+                setSubcategory(subSlug); // Switches "all", "imported", "local", "2m", "tenero", "cremeitalia", "dairy-craft", "goodrich"
                 setPage(1);
               }}
               searchQuery={query}

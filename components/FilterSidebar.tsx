@@ -47,6 +47,11 @@ const CATEGORY_ICONS: Record<string, React.ReactNode> = {
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
     </svg>
   ),
+  groceries: (
+    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+    </svg>
+  ),
   chocolates: (
     <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <circle cx="12" cy="12" r="9" strokeWidth="2" />
@@ -101,6 +106,12 @@ const GROCERY_SUBCATEGORIES = [
   { slug: "all", name: "All Groceries" },
   { slug: "imported", name: "Imported Groceries" },
   { slug: "local", name: "Local Groceries" },
+];
+
+const CHEESE_SUBCATEGORIES = [
+  { slug: "cremeitalia", name: "Creme Italia" },
+  { slug: "dairy-craft", name: "Dairy Craft" },
+  { slug: "goodrich", name: "Goodrich" },
 ];
 
 export default function FilterSidebar({
@@ -198,16 +209,24 @@ export default function FilterSidebar({
 
           <nav className="relative mt-3 space-y-1.5">
             {fullCategories.map((item) => {
-              const isActive = activeCategory.toLowerCase() === item.slug.toLowerCase();
-              const icon = CATEGORY_ICONS[item.slug.toLowerCase()] || CATEGORY_ICONS.all;
-              const isChocolates = item.slug.toLowerCase() === "chocolates";
+              const activeCategoryLower = activeCategory.toLowerCase();
+              const itemSlugLower = item.slug.toLowerCase();
+              const isActive = activeCategoryLower === itemSlugLower;
+              const icon = CATEGORY_ICONS[itemSlugLower] || CATEGORY_ICONS.all;
+
+              const isChocolates = itemSlugLower === "chocolates";
+              const isGroceries = itemSlugLower === "groceries";
+              const isDairy =
+                itemSlugLower === "dairy" || itemSlugLower === "dairy-non-dairy";
+
+              const hasSubcategories = isChocolates || isGroceries || isDairy;
 
               return (
                 <div key={item.slug} className="flex flex-col">
                   <button
                     onClick={() => {
                       onSelectCategory(item.slug);
-                      if (onSelectSubcategory && !isChocolates) {
+                      if (onSelectSubcategory && !hasSubcategories) {
                         onSelectSubcategory("all");
                       }
                     }}
@@ -269,91 +288,183 @@ export default function FilterSidebar({
                       )}
                     </span>
                   </button>
-{/* Subcategories Accordion for Chocolates */}
-{isChocolates && (
-  <AnimatePresence>
-    {isActive && (
-      <motion.div
-        initial={{ opacity: 0, height: 0 }}
-        animate={{ opacity: 1, height: "auto" }}
-        exit={{ opacity: 0, height: 0 }}
-        transition={{ duration: 0.2 }}
-        className="ml-6 mt-1 flex flex-col gap-1 border-l-2 border-red-200 pl-3.5 overflow-hidden"
-      >
-        {CHOCOLATE_SUBCATEGORIES.map((sub) => {
-          const isSubActive =
-            activeSubcategory.toLowerCase() === sub.slug.toLowerCase();
 
-          return (
-            <button
-              key={sub.slug}
-              type="button"
-              onClick={(e) => {
-                e.stopPropagation();
-                if (onSelectSubcategory) onSelectSubcategory(sub.slug);
-              }}
-              className={`text-left text-[11px] py-1 transition-colors flex items-center gap-1.5 ${
-                isSubActive
-                  ? "font-bold text-[#d32f2f]"
-                  : "font-medium text-neutral-500 hover:text-neutral-900"
-              }`}
-            >
-              <span
-                className={`h-1.5 w-1.5 rounded-full ${
-                  isSubActive ? "bg-[#d32f2f]" : "bg-neutral-300"
-                }`}
-              />
-              <span>{sub.name}</span>
-            </button>
-          );
-        })}
-      </motion.div>
-    )}
-  </AnimatePresence>
-)}
+                  {/* Subcategories Accordion for Chocolates */}
+                  {isChocolates && (
+                    <AnimatePresence>
+                      {isActive && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: "auto" }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.2 }}
+                          className="ml-6 mt-1 flex flex-col gap-1 border-l-2 border-red-200 pl-3.5 overflow-hidden"
+                        >
+                          {CHOCOLATE_SUBCATEGORIES.map((sub) => {
+                            const isSubActive =
+                              activeSubcategory.toLowerCase() === sub.slug.toLowerCase();
 
-{/* Subcategories Accordion for Groceries */}
-{item.slug.toLowerCase() === "groceries" && (
-  <AnimatePresence>
-    {isActive && (
-      <motion.div
-        initial={{ opacity: 0, height: 0 }}
-        animate={{ opacity: 1, height: "auto" }}
-        exit={{ opacity: 0, height: 0 }}
-        transition={{ duration: 0.2 }}
-        className="ml-6 mt-1 flex flex-col gap-1 border-l-2 border-red-200 pl-3.5 overflow-hidden"
-      >
-        {GROCERY_SUBCATEGORIES.map((sub) => {
-          const isSubActive =
-            activeSubcategory.toLowerCase() === sub.slug.toLowerCase();
+                            return (
+                              <button
+                                key={sub.slug}
+                                type="button"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  if (onSelectSubcategory) onSelectSubcategory(sub.slug);
+                                }}
+                                className={`text-left text-[11px] py-1 transition-colors flex items-center gap-1.5 ${
+                                  isSubActive
+                                    ? "font-bold text-[#d32f2f]"
+                                    : "font-medium text-neutral-500 hover:text-neutral-900"
+                                }`}
+                              >
+                                <span
+                                  className={`h-1.5 w-1.5 rounded-full ${
+                                    isSubActive ? "bg-[#d32f2f]" : "bg-neutral-300"
+                                  }`}
+                                />
+                                <span>{sub.name}</span>
+                              </button>
+                            );
+                          })}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  )}
 
-          return (
-            <button
-              key={sub.slug}
-              type="button"
-              onClick={(e) => {
-                e.stopPropagation();
-                if (onSelectSubcategory) onSelectSubcategory(sub.slug);
-              }}
-              className={`text-left text-[11px] py-1 transition-colors flex items-center gap-1.5 ${
-                isSubActive
-                  ? "font-bold text-[#d32f2f]"
-                  : "font-medium text-neutral-500 hover:text-neutral-900"
-              }`}
-            >
-              <span
-                className={`h-1.5 w-1.5 rounded-full ${
-                  isSubActive ? "bg-[#d32f2f]" : "bg-neutral-300"
-                }`}
-              />
-              <span>{sub.name}</span>
-            </button>
-          );
-        })}
-      </motion.div>
-    )}
-  </AnimatePresence>
-)}
+                  {/* Subcategories Accordion for Groceries */}
+                  {isGroceries && (
+                    <AnimatePresence>
+                      {isActive && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: "auto" }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.2 }}
+                          className="ml-6 mt-1 flex flex-col gap-1 border-l-2 border-red-200 pl-3.5 overflow-hidden"
+                        >
+                          {GROCERY_SUBCATEGORIES.map((sub) => {
+                            const isSubActive =
+                              activeSubcategory.toLowerCase() === sub.slug.toLowerCase();
+
+                            return (
+                              <button
+                                key={sub.slug}
+                                type="button"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  if (onSelectSubcategory) onSelectSubcategory(sub.slug);
+                                }}
+                                className={`text-left text-[11px] py-1 transition-colors flex items-center gap-1.5 ${
+                                  isSubActive
+                                    ? "font-bold text-[#d32f2f]"
+                                    : "font-medium text-neutral-500 hover:text-neutral-900"
+                                }`}
+                              >
+                                <span
+                                  className={`h-1.5 w-1.5 rounded-full ${
+                                    isSubActive ? "bg-[#d32f2f]" : "bg-neutral-300"
+                                  }`}
+                                />
+                                <span>{sub.name}</span>
+                              </button>
+                            );
+                          })}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  )}
+
+                  {/* Subcategories Accordion for Dairy & Non-Dairy -> Cheese Section */}
+                  {isDairy && (
+                    <AnimatePresence>
+                      {isActive && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: "auto" }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.2 }}
+                          className="ml-6 mt-1 flex flex-col gap-1 border-l-2 border-red-200 pl-3.5 overflow-hidden"
+                        >
+                          {/* All Dairy & Non-Dairy Default Option */}
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              if (onSelectSubcategory) onSelectSubcategory("all");
+                            }}
+                            className={`text-left text-[11px] py-1 transition-colors flex items-center gap-1.5 ${
+                              activeSubcategory.toLowerCase() === "all"
+                                ? "font-bold text-[#d32f2f]"
+                                : "font-medium text-neutral-500 hover:text-neutral-900"
+                            }`}
+                          >
+                            <span
+                              className={`h-1.5 w-1.5 rounded-full ${
+                                activeSubcategory.toLowerCase() === "all"
+                                  ? "bg-[#d32f2f]"
+                                  : "bg-neutral-300"
+                              }`}
+                            />
+                            <span>All Dairy & Non-Dairy</span>
+                          </button>
+
+                          {/* CHEESE FOLDER HEADING */}
+                          <div className="mt-1 flex flex-col">
+                            <div className="flex items-center gap-1.5 py-1 text-[11px] font-bold text-neutral-800">
+                              <svg
+                                className="h-3.5 w-3.5 text-[#d32f2f]"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth="2"
+                                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                                />
+                              </svg>
+                              <span>Cheese</span>
+                            </div>
+
+                            {/* 3 Indented Cheese Subcategories */}
+                            <div className="ml-2.5 flex flex-col gap-1 border-l border-neutral-300 pl-3">
+                              {CHEESE_SUBCATEGORIES.map((sub, index) => {
+                                const isSubActive =
+                                  activeSubcategory.toLowerCase() === sub.slug.toLowerCase();
+
+                                return (
+                                  <button
+                                    key={sub.slug}
+                                    type="button"
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      if (onSelectSubcategory) onSelectSubcategory(sub.slug);
+                                    }}
+                                    className={`text-left text-[11px] py-1 transition-colors flex items-center gap-1.5 ${
+                                      isSubActive
+                                        ? "font-bold text-[#d32f2f]"
+                                        : "font-medium text-neutral-500 hover:text-neutral-900"
+                                    }`}
+                                  >
+                                    <span
+                                      className={`h-1.5 w-1.5 rounded-full ${
+                                        isSubActive ? "bg-[#d32f2f]" : "bg-neutral-300"
+                                      }`}
+                                    />
+                                    <span>
+                                      {index + 1}. {sub.name}
+                                    </span>
+                                  </button>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  )}
                 </div>
               );
             })}
