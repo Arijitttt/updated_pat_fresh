@@ -177,7 +177,7 @@
     "unit": "per tub",
     "origin": "India",
     "storage": "Keep refrigerated (2°C - 4°C)",
-    "image": "/images/dairy/Dairy Craft Ricotta (500 GMS).PNG",
+    "image": "/images/dairy/Dairy Craft Ricotta (500 GMS).png",
     "description": "Mild whey cheese with fine curds, ideal for spinach ricotta pasta bakes and cheesecakes.",
     "specifications": { "brand": "Dairy Craft", "netWeight": "500 g", "dietary": "Vegetarian" }
   },
@@ -289,7 +289,7 @@
     "unit": "per tub",
     "origin": "India",
     "storage": "Keep refrigerated (2°C - 4°C)",
-    "image": "/images/dairy/La Cremella Naturally Sweet Mascarpone.PNG",
+    "image": "/images/dairy/La Cremella Naturally Sweet Mascarpone Cheese (500 GMS).png",
     "description": "Silky European-style mascarpone with delicate natural milk sweetness for bakeries and tiramisu.",
     "specifications": { "brand": "Dairy Craft", "dietary": "Vegetarian" }
   },
