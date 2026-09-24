@@ -1,37 +1,54 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import SearchBar from "@/components/SearchBar";
-import Filter from "@/components/Filter";
 import Pagination from "@/components/Pagination";
 import ProductGrid from "@/components/ProductGrid";
 import { getProducts } from "@/lib/products";
 import { getCategories } from "@/lib/categories";
-
 import FilterSidebar from "@/components/FilterSidebar";
 
 const PAGE_SIZE = 9;
 
-export default function ProductsPage() {
+function ProductsCatalogContent() {
+  const searchParams = useSearchParams();
+
+  const initialCategory = searchParams.get("category") || "all";
+  const initialSubcategory = searchParams.get("subcategory") || "all";
+
   const allProducts = useMemo(() => getProducts(), []);
   const categories = useMemo(() => getCategories(), []);
 
   const [query, setQuery] = useState("");
-  const [category, setCategory] = useState("all");
+  const [category, setCategory] = useState(initialCategory);
+  const [subcategory, setSubcategory] = useState(initialSubcategory);
   const [page, setPage] = useState(1);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return allProducts.filter((product) => {
-      const matchesCategory = category === "all" || product.category === category;
+
+    return allProducts.filter((product: any) => {
+      // 1. Category check
+      const matchesCategory =
+        category === "all" ||
+        product.category?.toLowerCase() === category.toLowerCase();
+
+      // 2. Subcategory check (for 2M / Tenero under Chocolates)
+      const matchesSubcategory =
+        category.toLowerCase() !== "chocolates" ||
+        subcategory === "all" ||
+        product.subcategory?.toLowerCase() === subcategory.toLowerCase();
+
+      // 3. Search query check
       const matchesQuery =
         !q ||
         product.name.toLowerCase().includes(q) ||
-        product.description.toLowerCase().includes(q);
-      return matchesCategory && matchesQuery;
+        (product.description && product.description.toLowerCase().includes(q));
+
+      return matchesCategory && matchesSubcategory && matchesQuery;
     });
-  }, [allProducts, query, category]);
+  }, [allProducts, query, category, subcategory]);
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const currentPage = Math.min(page, totalPages);
@@ -85,25 +102,33 @@ export default function ProductsPage() {
         <div className="grid gap-8 lg:grid-cols-[260px_1fr]">
           {/* Left Column: Styled Sidebar */}
           <aside className="lg:sticky lg:top-24 lg:self-start">
-  <FilterSidebar
-    categories={categories}
-    activeCategory={category}
-    onSelectCategory={(slug) => {
-      setCategory(slug);
-      setPage(1);
-    }}
-    searchQuery={query}
-    onSearchChange={(val) => {
-      setQuery(val);
-      setPage(1);
-    }}
-    onReset={() => {
-      setCategory("all");
-      setQuery("");
-      setPage(1);
-    }}
-  />
-</aside>
+            <FilterSidebar
+              categories={categories}
+              activeCategory={category}
+              activeSubcategory={subcategory}
+              onSelectCategory={(slug) => {
+                setCategory(slug);
+                setSubcategory("all"); // Reset subcategory when changing main category
+                setPage(1);
+              }}
+              onSelectSubcategory={(subSlug) => {
+                setSubcategory(subSlug); // Switches "all", "2m", "tenero"
+                setPage(1);
+              }}
+              searchQuery={query}
+              onSearchChange={(val) => {
+                setQuery(val);
+                setPage(1);
+              }}
+              onReset={() => {
+                setCategory("all");
+                setSubcategory("all");
+                setQuery("");
+                setPage(1);
+              }}
+            />
+          </aside>
+
           {/* Right Column: Dynamic Animated Products View */}
           <div className="min-w-0">
             <AnimatePresence mode="wait">
@@ -123,12 +148,13 @@ export default function ProductsPage() {
                   </div>
                   <h3 className="mt-4 text-base font-bold text-neutral-800">No products found</h3>
                   <p className="mt-1 max-w-sm text-xs text-neutral-500">
-                    We couldn&apos;t find anything matching &quot;{query}&quot;. Try adjusting your keywords or clearing the category filter.
+                    We couldn&apos;t find anything matching your filter criteria. Try choosing another subcategory or clearing the search.
                   </p>
                   <button
                     onClick={() => {
                       setQuery("");
                       setCategory("all");
+                      setSubcategory("all");
                       setPage(1);
                     }}
                     className="mt-5 rounded-lg bg-neutral-900 px-4 py-2 text-xs font-semibold text-white transition hover:bg-neutral-800"
@@ -138,7 +164,7 @@ export default function ProductsPage() {
                 </motion.div>
               ) : (
                 <motion.div
-                  key={`${category}-${query}-${currentPage}`}
+                  key={`${category}-${subcategory}-${query}-${currentPage}`}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
@@ -164,5 +190,13 @@ export default function ProductsPage() {
         </div>
       </section>
     </main>
+  );
+}
+
+export default function ProductsPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-[#fafaf9]" />}>
+      <ProductsCatalogContent />
+    </Suspense>
   );
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface Category {
   slug: string;
@@ -11,7 +11,9 @@ interface Category {
 interface FilterSidebarProps {
   categories: Category[];
   activeCategory: string;
+  activeSubcategory?: string;
   onSelectCategory: (slug: string) => void;
+  onSelectSubcategory?: (subSlug: string) => void;
   searchQuery: string;
   onSearchChange: (query: string) => void;
   onReset?: () => void;
@@ -45,18 +47,17 @@ const CATEGORY_ICONS: Record<string, React.ReactNode> = {
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
     </svg>
   ),
-chocolates: (
-  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <circle cx="12" cy="12" r="9" strokeWidth="2" />
-    <path strokeLinecap="round" strokeWidth="2.5" d="M8.5 8.5h.01M15.5 9.5h.01M9 15.5h.01M14.5 15h.01M12 12h.01" />
-  </svg>
-),
+  chocolates: (
+    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <circle cx="12" cy="12" r="9" strokeWidth="2" />
+      <path strokeLinecap="round" strokeWidth="2.5" d="M8.5 8.5h.01M15.5 9.5h.01M9 15.5h.01M14.5 15h.01M12 12h.01" />
+    </svg>
+  ),
   beverages: (
     <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
     </svg>
   ),
-  // Dairy & Non-Dairy (Milk Bottle / Cream)
   dairy: (
     <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 3h6m-5 4h4m-5 4h6m-8 3v5a2 2 0 002 2h6a2 2 0 002-2v-5l-2-4V7a2 2 0 00-2-2h-2a2 2 0 00-2 2v4l-2 4z" />
@@ -67,7 +68,6 @@ chocolates: (
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 3h6m-5 4h4m-5 4h6m-8 3v5a2 2 0 002 2h6a2 2 0 002-2v-5l-2-4V7a2 2 0 00-2-2h-2a2 2 0 00-2 2v4l-2 4z" />
     </svg>
   ),
-  // Frozen Foods (Snowflake)
   frozen: (
     <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 2v20m10-10H2m17.07-7.07L4.93 19.07m0-14.14l14.14 14.14M8 4l4 4 4-4M8 20l4-4 4 4m-16-8l4-4-4-4m20 8l-4-4 4-4" />
@@ -78,13 +78,11 @@ chocolates: (
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 2v20m10-10H2m17.07-7.07L4.93 19.07m0-14.14l14.14 14.14M8 4l4 4 4-4M8 20l4-4 4 4m-16-8l4-4-4-4m20 8l-4-4 4-4" />
     </svg>
   ),
-  // Pantry & Dry Staples (Storage Container / Spice Shelf)
   pantry: (
     <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
     </svg>
   ),
-  // Ready to Cook (Cooking Flame / Wok Heat)
   "ready-to-cook": (
     <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
@@ -93,15 +91,26 @@ chocolates: (
   ),
 };
 
+const CHOCOLATE_SUBCATEGORIES = [
+  { slug: "all", name: "All Chocolates" },
+  { slug: "2m", name: "2M Brand" },
+  { slug: "tenero", name: "Tenero Brand" },
+];
+
 export default function FilterSidebar({
   categories,
   activeCategory,
+  activeSubcategory = "all",
   onSelectCategory,
+  onSelectSubcategory,
   searchQuery,
   onSearchChange,
   onReset,
 }: FilterSidebarProps) {
-  const isFiltered = activeCategory !== "all" || searchQuery.trim().length > 0;
+  const isFiltered =
+    activeCategory !== "all" ||
+    activeSubcategory !== "all" ||
+    searchQuery.trim().length > 0;
 
   // Ensure "All" is always first
   const fullCategories: Category[] = [
@@ -185,65 +194,122 @@ export default function FilterSidebar({
             {fullCategories.map((item) => {
               const isActive = activeCategory.toLowerCase() === item.slug.toLowerCase();
               const icon = CATEGORY_ICONS[item.slug.toLowerCase()] || CATEGORY_ICONS.all;
+              const isChocolates = item.slug.toLowerCase() === "chocolates";
 
               return (
-                <button
-                  key={item.slug}
-                  onClick={() => onSelectCategory(item.slug)}
-                  className={`group relative flex w-full items-center justify-between rounded-xl px-3.5 py-2.5 text-left text-xs font-semibold transition-colors duration-200 ${
-                    isActive
-                      ? "text-white"
-                      : "text-neutral-600 hover:bg-neutral-100/70 hover:text-neutral-900"
-                  }`}
-                >
-                  {/* Sliding Active Background (Framer Motion) */}
-                  {isActive && (
-                    <motion.div
-                      layoutId="activeCategoryPill"
-                      className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#d32f2f] to-[#b71c1c] shadow-md shadow-red-600/25"
-                      transition={{
-                        type: "spring",
-                        staggerChildren: 0,
-                        stiffness: 380,
-                        damping: 30,
-                      }}
-                    />
-                  )}
-
-                  {/* Left Label & Icon */}
-                  <span className="relative z-10 flex items-center gap-2.5">
-                    <span
-                      className={`transition-colors ${
-                        isActive
-                          ? "text-white"
-                          : "text-neutral-400 group-hover:text-neutral-700"
-                      }`}
-                    >
-                      {icon}
-                    </span>
-                    <span className="capitalize">{item.name}</span>
-                  </span>
-
-                  {/* Right Active Indicator */}
-                  <span className="relative z-10 flex items-center">
-                    {isActive ? (
-                      <motion.span
-                        initial={{ scale: 0 }}
-                        animate={{ scale: 1 }}
-                        className="h-1.5 w-1.5 rounded-full bg-white"
+                <div key={item.slug} className="flex flex-col">
+                  <button
+                    onClick={() => {
+                      onSelectCategory(item.slug);
+                      if (onSelectSubcategory && !isChocolates) {
+                        onSelectSubcategory("all");
+                      }
+                    }}
+                    className={`group relative flex w-full items-center justify-between rounded-xl px-3.5 py-2.5 text-left text-xs font-semibold transition-colors duration-200 ${
+                      isActive
+                        ? "text-white"
+                        : "text-neutral-600 hover:bg-neutral-100/70 hover:text-neutral-900"
+                    }`}
+                  >
+                    {/* Sliding Active Background (Framer Motion) */}
+                    {isActive && (
+                      <motion.div
+                        layoutId="activeCategoryPill"
+                        className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#d32f2f] to-[#b71c1c] shadow-md shadow-red-600/25"
+                        transition={{
+                          type: "spring",
+                          stiffness: 380,
+                          damping: 30,
+                        }}
                       />
-                    ) : (
-                      <svg
-                        className="h-3.5 w-3.5 text-neutral-300 opacity-0 transition-all group-hover:opacity-100 group-hover:translate-x-0.5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
-                      </svg>
                     )}
-                  </span>
-                </button>
+
+                    {/* Left Label & Icon */}
+                    <span className="relative z-10 flex items-center gap-2.5">
+                      <span
+                        className={`transition-colors ${
+                          isActive
+                            ? "text-white"
+                            : "text-neutral-400 group-hover:text-neutral-700"
+                        }`}
+                      >
+                        {icon}
+                      </span>
+                      <span className="capitalize">{item.name}</span>
+                    </span>
+
+                    {/* Right Active Indicator */}
+                    <span className="relative z-10 flex items-center">
+                      {isActive ? (
+                        <motion.span
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          className="h-1.5 w-1.5 rounded-full bg-white"
+                        />
+                      ) : (
+                        <svg
+                          className="h-3.5 w-3.5 text-neutral-300 opacity-0 transition-all group-hover:opacity-100 group-hover:translate-x-0.5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2.5"
+                            d="M9 5l7 7-7 7"
+                          />
+                        </svg>
+                      )}
+                    </span>
+                  </button>
+
+                  {/* Subcategories Accordion for Chocolates */}
+                  {/* Subcategories Accordion for Chocolates */}
+{isChocolates && (
+  <AnimatePresence>
+    {isActive && (
+      <motion.div
+        initial={{ opacity: 0, height: 0 }}
+        animate={{ opacity: 1, height: "auto" }}
+        exit={{ opacity: 0, height: 0 }}
+        transition={{ duration: 0.2 }}
+        className="ml-6 mt-1 flex flex-col gap-1 border-l-2 border-red-200 pl-3.5 overflow-hidden"
+      >
+        {CHOCOLATE_SUBCATEGORIES.map((sub) => {
+          const isSubActive =
+            activeSubcategory.toLowerCase() === sub.slug.toLowerCase();
+
+          return (
+            <button
+              key={sub.slug}
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                if (onSelectSubcategory) {
+                  onSelectSubcategory(sub.slug);
+                }
+              }}
+              className={`text-left text-[11px] py-1 transition-colors flex items-center gap-1.5 ${
+                isSubActive
+                  ? "font-bold text-[#d32f2f]"
+                  : "font-medium text-neutral-500 hover:text-neutral-900"
+              }`}
+            >
+              <span
+                className={`h-1.5 w-1.5 rounded-full ${
+                  isSubActive ? "bg-[#d32f2f]" : "bg-neutral-300"
+                }`}
+              />
+              <span>{sub.name}</span>
+            </button>
+          );
+        })}
+      </motion.div>
+    )}
+  </AnimatePresence>
+)}
+                </div>
               );
             })}
           </nav>

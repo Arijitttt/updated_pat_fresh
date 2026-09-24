@@ -37,17 +37,38 @@ export default function ProductPage({
     notFound();
   }
 
-  const related = getProductsByCategory(product.category)
-    .filter((item) => item.slug !== product.slug)
-    .slice(0, 3);
+  const categoryProducts = getProductsByCategory(product.category);
+  const subcategory = (product as any).subcategory;
+
+  const filteredList = subcategory
+    ? categoryProducts.filter(
+        (item: any) =>
+          item.subcategory?.toLowerCase() === subcategory.toLowerCase() &&
+          item.slug !== product.slug
+      )
+    : categoryProducts.filter((item) => item.slug !== product.slug);
+
+  const related = (
+    filteredList.length > 0
+      ? filteredList
+      : categoryProducts.filter((item) => item.slug !== product.slug)
+  ).slice(0, 3);
+
+  const categoryParam = encodeURIComponent(product.category.toLowerCase());
+  const targetHref = subcategory
+    ? `/products?category=${categoryParam}&subcategory=${encodeURIComponent(subcategory.toLowerCase())}`
+    : `/products?category=${categoryParam}`;
+
+  const brandOrCategoryLabel = subcategory
+    ? `${subcategory.toUpperCase()} Chocolates`
+    : product.category;
 
   return (
     <main className="min-h-screen bg-[#fafaf9] text-navy">
-      {/* Top Breadcrumb Navigation */}
       <div className="border-b border-neutral-200/80 bg-white">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <Link
-            href="/products"
+            href={targetHref}
             className="group inline-flex items-center gap-2 text-xs font-semibold text-neutral-600 transition hover:text-[#d32f2f]"
           >
             <svg
@@ -58,19 +79,34 @@ export default function ProductPage({
             >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
-            Back to catalogue
+            Back to {brandOrCategoryLabel}
           </Link>
           <span className="text-xs font-medium text-neutral-400 capitalize">
-            {product.category} / <span className="font-semibold text-neutral-700">{product.name}</span>
+            <Link
+              href={`/products?category=${categoryParam}`}
+              className="hover:text-neutral-700 hover:underline"
+            >
+              {product.category}
+            </Link>{" "}
+            {subcategory && (
+              <>
+                /{" "}
+                <Link
+                  href={targetHref}
+                  className="hover:text-neutral-700 hover:underline uppercase"
+                >
+                  {subcategory}
+                </Link>
+              </>
+            )}{" "}
+            / <span className="font-semibold text-neutral-700">{product.name}</span>
           </span>
         </div>
       </div>
 
-      {/* Main Product Details Component */}
       <section className="mx-auto max-w-6xl px-6 py-12">
         <ProductDetails product={product} />
 
-        {/* Related Products Section */}
         {related.length > 0 && (
           <div className="mt-20 border-t border-neutral-200/80 pt-12">
             <div className="flex items-center justify-between">
@@ -79,14 +115,14 @@ export default function ProductPage({
                   Explore Category
                 </span>
                 <h2 className="mt-1 font-display text-2xl font-bold tracking-tight text-neutral-900">
-                  Related Products
+                  Related {brandOrCategoryLabel}
                 </h2>
               </div>
               <Link
-                href="/products"
+                href={targetHref}
                 className="text-xs font-semibold text-[#d32f2f] hover:underline"
               >
-                View all &rarr;
+                View all {brandOrCategoryLabel} &rarr;
               </Link>
             </div>
 
