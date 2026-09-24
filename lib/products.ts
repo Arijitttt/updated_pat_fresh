@@ -1,11 +1,8 @@
-import vegetables from "@/data/products/vegetables.json";
-import fruits from "@/data/products/fruits.json";
-import other from "@/data/products/other.json";
 import chocolates from "@/data/products/chocolates.json";
 import beverages from "@/data/products/beverages.json";
 import dairyProducts from "@/data/products/dairy.json";
 import frozenProducts from "@/data/products/frozen.json";
-import pantryProducts from "@/data/products/pantry.json";
+import groceries from "@/data/products/groceries.json";
 import readyToCookProducts from "@/data/products/ready-to-cook.json";
 import type { Product } from "@/types/product";
 
@@ -17,7 +14,7 @@ const productsByCategory: Record<string, Product[]> = {
   beverages,
   dairy: dairyProducts,
   frozen: frozenProducts,
-  pantry: pantryProducts,
+  groceries: groceries,
   "ready-to-cook": readyToCookProducts,
 };
 

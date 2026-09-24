@@ -97,6 +97,12 @@ const CHOCOLATE_SUBCATEGORIES = [
   { slug: "tenero", name: "Tenero Brand" },
 ];
 
+const GROCERY_SUBCATEGORIES = [
+  { slug: "all", name: "All Groceries" },
+  { slug: "imported", name: "Imported Groceries" },
+  { slug: "local", name: "Local Groceries" },
+];
+
 export default function FilterSidebar({
   categories,
   activeCategory,
@@ -263,9 +269,7 @@ export default function FilterSidebar({
                       )}
                     </span>
                   </button>
-
-                  {/* Subcategories Accordion for Chocolates */}
-                  {/* Subcategories Accordion for Chocolates */}
+{/* Subcategories Accordion for Chocolates */}
 {isChocolates && (
   <AnimatePresence>
     {isActive && (
@@ -286,9 +290,50 @@ export default function FilterSidebar({
               type="button"
               onClick={(e) => {
                 e.stopPropagation();
-                if (onSelectSubcategory) {
-                  onSelectSubcategory(sub.slug);
-                }
+                if (onSelectSubcategory) onSelectSubcategory(sub.slug);
+              }}
+              className={`text-left text-[11px] py-1 transition-colors flex items-center gap-1.5 ${
+                isSubActive
+                  ? "font-bold text-[#d32f2f]"
+                  : "font-medium text-neutral-500 hover:text-neutral-900"
+              }`}
+            >
+              <span
+                className={`h-1.5 w-1.5 rounded-full ${
+                  isSubActive ? "bg-[#d32f2f]" : "bg-neutral-300"
+                }`}
+              />
+              <span>{sub.name}</span>
+            </button>
+          );
+        })}
+      </motion.div>
+    )}
+  </AnimatePresence>
+)}
+
+{/* Subcategories Accordion for Groceries */}
+{item.slug.toLowerCase() === "groceries" && (
+  <AnimatePresence>
+    {isActive && (
+      <motion.div
+        initial={{ opacity: 0, height: 0 }}
+        animate={{ opacity: 1, height: "auto" }}
+        exit={{ opacity: 0, height: 0 }}
+        transition={{ duration: 0.2 }}
+        className="ml-6 mt-1 flex flex-col gap-1 border-l-2 border-red-200 pl-3.5 overflow-hidden"
+      >
+        {GROCERY_SUBCATEGORIES.map((sub) => {
+          const isSubActive =
+            activeSubcategory.toLowerCase() === sub.slug.toLowerCase();
+
+          return (
+            <button
+              key={sub.slug}
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                if (onSelectSubcategory) onSelectSubcategory(sub.slug);
               }}
               className={`text-left text-[11px] py-1 transition-colors flex items-center gap-1.5 ${
                 isSubActive

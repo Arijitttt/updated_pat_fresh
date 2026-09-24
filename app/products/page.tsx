@@ -27,16 +27,20 @@ function ProductsCatalogContent() {
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
+    const activeCat = category.toLowerCase();
 
     return allProducts.filter((product: any) => {
       // 1. Category check
       const matchesCategory =
         category === "all" ||
-        product.category?.toLowerCase() === category.toLowerCase();
+        product.category?.toLowerCase() === activeCat;
 
-      // 2. Subcategory check (for 2M / Tenero under Chocolates)
+      // 2. Subcategory check (Active for both Chocolates and Groceries)
+      const hasSubcategories =
+        activeCat === "chocolates" || activeCat === "groceries";
+
       const matchesSubcategory =
-        category.toLowerCase() !== "chocolates" ||
+        !hasSubcategories ||
         subcategory === "all" ||
         product.subcategory?.toLowerCase() === subcategory.toLowerCase();
 
@@ -79,7 +83,7 @@ function ProductsCatalogContent() {
                 Commercial Food Supplies
               </h1>
               <p className="mt-2 text-xs text-white/70 sm:text-sm">
-                Bulk ingredients, seafood, frozen meats, and pantry essentials across Kolkata.
+                Bulk ingredients, seafood, frozen meats, and grocery essentials across Kolkata.
               </p>
             </div>
 
@@ -108,11 +112,11 @@ function ProductsCatalogContent() {
               activeSubcategory={subcategory}
               onSelectCategory={(slug) => {
                 setCategory(slug);
-                setSubcategory("all"); // Reset subcategory when changing main category
+                setSubcategory("all"); // Reset subcategory when switching category
                 setPage(1);
               }}
               onSelectSubcategory={(subSlug) => {
-                setSubcategory(subSlug); // Switches "all", "2m", "tenero"
+                setSubcategory(subSlug); // Switches "all", "imported", "local", "2m", "tenero"
                 setPage(1);
               }}
               searchQuery={query}

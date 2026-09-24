@@ -26,11 +26,11 @@
     "file": "frozen.json"
   },
   {
-    "slug": "pantry",
-    "name": "Pantry",
+    "slug": "groceries",
+    "name": "Groceries",
     "description": "Commercial cooking oils, bulk culinary sauces, whole spices, seasonings, vinegars, and dry kitchen staples for restaurants and cloud kitchens.",
     "image": "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&q=80",
-    "file": "pantry.json"
+    "file": "groceries.json"
   },
   {
     "slug": "ready-to-cook",

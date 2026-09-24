@@ -30,7 +30,7 @@ frozen: {
   img: "https://images.unsplash.com/photo-1576107232684-1279f3908594?w=600&q=80",
   tag: "Fries, snacks & IQF vegetables",
 },
-pantry: {
+groceries: {
   img: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&q=80",
   tag: "Oils, sauces, spices & seasonings",
 },
@@ -46,7 +46,7 @@ const defaultCategories: CategoryItem[] = [
   { name: "Beverages", slug: "beverages" },
   { name: "Dairy & Non-Dairy", slug: "dairy" },
   { name: "Frozen Items", slug: "frozen" },
-  { name: "Pantry", slug: "pantry" },
+  { name: "Groceries", slug: "groceries" },
   { name: "Ready to Cook", slug: "ready-to-cook" },
 ];
 
