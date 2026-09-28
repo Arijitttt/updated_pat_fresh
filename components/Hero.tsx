@@ -115,17 +115,17 @@ export default function Hero() {
             className="relative lg:col-span-5"
           >
             <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-2.5 shadow-2xl backdrop-blur-sm">
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-neutral-900 sm:aspect-[5/4]">
-                <Image
-                  src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=1000&q=80"
-                  alt="Fresh produce at a local market"
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 500px"
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-              </div>
+  <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-neutral-900 sm:aspect-[5/4]">
+    <Image
+      src="/logo/website_main_page_image.png"
+      alt="Commercial Food Supplies Showcase"
+      fill
+      priority
+      sizes="(max-width: 1024px) 100vw, 500px"
+      className="object-cover"
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+  </div>
 
               {/* Floating Top Badge */}
               <motion.div

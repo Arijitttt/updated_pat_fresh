@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -33,19 +34,17 @@ export default function Navbar() {
           : "border-b border-white/5 bg-[#0a0f1d]"
       }`}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3.5">
         {/* Brand Logo */}
-        <Link href="/" className="group flex items-center gap-2.5">
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#d32f2f] font-display text-sm font-black text-white shadow-md shadow-red-600/30 transition-transform duration-200 group-hover:scale-105">
-            BF
-          </span>
-          <div className="flex flex-col">
-            <span className="font-display text-lg font-black tracking-tight text-white">
-              PAT<span className="text-[#ef4444]">Fresh</span>
-            </span>
-            <span className="text-[10px] font-semibold tracking-wider text-neutral-400">
-              WHOLESALE FOOD SUPPLY
-            </span>
+        <Link href="/" className="group flex items-center">
+          <div className="relative flex h-10 w-36 items-center justify-center overflow-hidden rounded-xl bg-white px-2.5 py-1 shadow-sm transition-transform duration-200 group-hover:scale-105 sm:h-11 sm:w-44">
+            <Image
+              src="/logo/pat_logo.jpeg"
+              alt="PatFresh - Where Quality Meets Convenience"
+              fill
+              priority
+              className="object-contain p-0.5"
+            />
           </div>
         </Link>
 

@@ -14,28 +14,28 @@ export interface CategoryItem {
 }
 
 const CATEGORY_FALLBACK_IMAGES: Record<string, { img: string; tag: string }> = {
-  chocolates: {
-    img: "https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=600&q=80",
-    tag: "Gourmet confectionery",
-  },
+ chocolates: {
+  img: "/categories/dark-chocolate-truffles-close-up.jpg",
+  tag: "Gourmet confectionery",
+},
   beverages: {
-    img: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600&q=80",
+    img: "/categories/breverages.jpg",
     tag: "Teas, syrups & bases",
   },
   dairy: {
-  img: "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=600&q=80",
+  img: "/categories/dairy-products.jpg",
   tag: "Milk, creams, cheeses & plant bases",
 },
 frozen: {
-  img: "https://images.unsplash.com/photo-1576107232684-1279f3908594?w=600&q=80",
+  img: "/categories/frozen.jpg",
   tag: "Fries, snacks & IQF vegetables",
 },
 groceries: {
-  img: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&q=80",
+  img: "/categories/groceries.png",
   tag: "Oils, sauces, spices & seasonings",
 },
 "ready-to-cook": {
-  img: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80",
+  img: "/categories/ready_to_eat.png",
   tag: "Gravy bases, marinated cuts & prepped preps",
 },
 };
