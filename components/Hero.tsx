@@ -69,15 +69,17 @@ export default function Hero() {
 
             {/* Headline */}
             <h1 className="mt-6 font-display text-4xl font-extrabold tracking-tight leading-[1.08] sm:text-5xl lg:text-6xl">
-              Fresh stock from the market,{" "}
+              Everything Your Kitchen Needs,{" "}
               <span className="bg-gradient-to-r from-[#ff4d4d] via-[#f87171] to-[#ff6b6b] bg-clip-text text-transparent">
-                tracked every single day
+                One Fresh Supply Partner
               </span>
             </h1>
 
             {/* Description using dynamic site info */}
             <p className="mt-6 max-w-xl text-sm leading-relaxed text-neutral-300 sm:text-base">
-              {site.description} Every listing carries its origin and unit, so you know exactly what&apos;s available before you call or visit.
+              From everyday essentials to hard-to-find ingredients, PatFresh brings together the products that keep kitchens moving.
+Frozen foods, premium dairy, seafood, meats, imported ingredients, ready-to-eat favourites and more — carefully sourced and supplied to cafés, restaurants, chefs and businesses.
+You focus on the food. We’ll take care of the supply.
             </p>
 
             {/* Action Buttons */}

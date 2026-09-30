@@ -4,39 +4,62 @@ import { motion, Variants } from "framer-motion";
 
 const features = [
   {
-    title: "Updated Daily",
-    description: "Stock levels directly mirror daily wholesale dock and farm arrivals, avoiding outdated order sheets.",
+    title: "Explore Our Range",
+    description:
+      "Browse our categories and discover the brands, ingredients and products we supply. The catalogue is designed to give you a clear idea of what’s available through PatFresh.",
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.8"
+          d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+        />
       </svg>
     ),
   },
   {
-    title: "Origin Noted",
-    description: "Every item states exact territorial sourcing—from Gangetic freshwater fish to regional imports.",
+    title: "Product Information",
+    description:
+      "Find useful details about products, pack sizes, brands and categories so you can make an informed choice before getting in touch with our team.",
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.8"
+          d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
       </svg>
     ),
   },
   {
-    title: "Streamlined Procurement",
-    description: "Multi-category searching tailored for fast commercial chef audits without complex retail checkouts.",
+    title: "Availability on Request",
+    description:
+      "Our warehouse inventory changes regularly, so product availability may vary. Found something you need? Give us a call or speak to our team to confirm current availability.",
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M4 6h16M4 12h16M4 18h7" />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.8"
+          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+        />
       </svg>
     ),
   },
   {
-    title: "Direct B2B Contact",
-    description: "Cut out middlemen margins. Speak with wholesale coordinators directly for delivery scheduling.",
+    title: "Built for B2B",
+    description:
+      "Need larger quantities, regular supplies or something specific for your business? Our team can help you check availability and discuss your requirements directly.",
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.8"
+          d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+        />
       </svg>
     ),
   },
@@ -71,10 +94,10 @@ export default function FeatureGrid() {
             Procurement Standards
           </span>
           <h2 className="mt-2 font-display text-3xl font-extrabold tracking-tight text-neutral-900 sm:text-4xl">
-            Why This Catalogue Works
+            Why PatFresh?
           </h2>
-          <p className="mx-auto mt-3 max-w-lg text-sm text-neutral-500">
-            Engineered around the operational requirements of hospitality and institutional kitchens.
+          <p className="mx-auto mt-3 max-w-xl text-sm text-neutral-500">
+            From everyday essentials to specialty ingredients, our catalogue brings together the products that cafés, restaurants, retailers and food businesses look for — all in one place.
           </p>
         </div>
 
@@ -110,12 +133,23 @@ export default function FeatureGrid() {
               <div className="mt-6 flex items-center gap-1 text-[11px] font-bold text-[#d32f2f] opacity-0 transition-opacity duration-200 group-hover:opacity-100">
                 <span>Verified Standard</span>
                 <svg className="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  <path
+                    fillRule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clipRule="evenodd"
+                  />
                 </svg>
               </div>
             </motion.div>
           ))}
         </motion.div>
+
+        {/* Footer Tagline Banner */}
+        <div className="mt-14 text-center">
+          <p className="inline-block rounded-full border border-red-100 bg-red-50/80 px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-[#d32f2f] shadow-xs">
+            Browse. Find. Call. We’ll take care of the rest.
+          </p>
+        </div>
       </div>
     </section>
   );

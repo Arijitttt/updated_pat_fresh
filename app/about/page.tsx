@@ -97,13 +97,13 @@ export default function AboutPage() {
             transition={{ duration: 0.5 }}
             className="flex flex-col items-center"
           >
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.05] px-4 py-1.5 text-xs font-semibold tracking-widest text-neutral-300 backdrop-blur-md">
+            {/* <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.05] px-4 py-1.5 text-xs font-semibold tracking-widest text-neutral-300 backdrop-blur-md">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#ef4444] opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-[#ef4444]" />
               </span>
               ABOUT OUR INFRASTRUCTURE
-            </div>
+            </div> */}
 
             <h1 className="mt-6 font-display text-4xl font-black tracking-tight sm:text-6xl lg:text-7xl">
               About{" "}
@@ -116,17 +116,19 @@ export default function AboutPage() {
             </h1>
 
             <p className="mt-6 max-w-2xl text-sm leading-relaxed text-neutral-300 sm:text-base">
-              Your trusted partner for wholesale fish, vegetables, fruits, and commercial pantry supplies. Operating with scheduled deliveries around {site.address}.
+             From frozen favourites and premium dairy to seafood, meats, imported ingredients and everyday essentials, PatFresh helps businesses find the products they need — and keep them coming.
+<br />
+Thousands of products. One supply partner. Less running around.
             </p>
 
             {/* Hub Quick Info Pill */}
-            <div className="mt-8 inline-flex items-center gap-2.5 rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-2.5 text-xs text-neutral-300 backdrop-blur-md">
+            {/* <div className="mt-8 inline-flex items-center gap-2.5 rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-2.5 text-xs text-neutral-300 backdrop-blur-md">
               <svg className="h-4 w-4 shrink-0 text-[#ef4444]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
               <span>{site.address}</span>
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </section>
@@ -194,7 +196,7 @@ export default function AboutPage() {
               <div className="relative overflow-hidden rounded-3xl border border-neutral-200/80 bg-white p-3 shadow-xl">
                 <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-neutral-900 sm:aspect-[3/4]">
                   <Image
-                    src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1000&q=80"
+                    src="/logo/about_image_2.jpeg"
                     alt="Patfresh logistics and warehouse operations"
                     fill
                     sizes="(max-width: 1024px) 100vw, 40vw"
@@ -235,11 +237,11 @@ export default function AboutPage() {
               </div>
 
               <h2 className="mt-4 font-display text-3xl font-extrabold text-[#0f172a] sm:text-4xl">
-                Sourced With Complete Care
+                Good Products. Properly Sourced.
               </h2>
 
               <p className="mt-5 text-sm leading-relaxed text-neutral-600">
-                We believe culinary teams should have clear, transparent information before committing to supply runs. That&apos;s why our catalogue details territorial origins, freshness grades, cuts, and storage temperatures.
+                We’re always looking for what’s next — the right brand, the right ingredient, the right product for the right kitchen.From everyday essentials to specialty finds from around the world, PatFresh brings together products that chefs, cafés, restaurants and food businesses actually need. Our range keeps evolving because your kitchen does too.Discover something for your menu. Find something for your kitchen.
               </p>
 
               <p className="mt-3 text-sm leading-relaxed text-neutral-600">
@@ -262,7 +264,7 @@ export default function AboutPage() {
             {/* Warehouse / Produce Display Image */}
             <div className="order-1 relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-neutral-100 shadow-inner md:order-2">
               <Image
-                src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80"
+                src="/logo/about_image.png"
                 alt="Fresh market produce sourced with care"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -280,10 +282,13 @@ export default function AboutPage() {
         
         <div className="relative mx-auto max-w-xl px-6">
           <h2 className="font-display text-3xl font-extrabold tracking-tight sm:text-4xl">
-            Looking for something specific?
+            Found Something You Need?
           </h2>
           <p className="mt-3 text-sm text-neutral-300">
-            Explore our daily product catalogue or speak directly with our Kolkata supply team for specialized bulk orders.
+            Browse the PatFresh catalogue to discover the products and brands we supply.
+            <br/>
+            <br/>
+            Seen something that fits your kitchen or business? Get in touch with our team to confirm current availability, quantities and supply options.
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -291,13 +296,13 @@ export default function AboutPage() {
               href="/contact"
               className="w-full rounded-xl bg-gradient-to-r from-[#d32f2f] to-[#b71c1c] px-8 py-3.5 text-xs font-bold uppercase tracking-wider text-white shadow-lg shadow-red-600/30 transition hover:opacity-95 active:scale-95 sm:w-auto"
             >
-              Contact Us
+              Talk to PatFresh
             </Link>
             <Link
               href="/products"
               className="w-full rounded-xl border border-white/15 bg-white/5 px-8 py-3.5 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-md transition hover:border-white/30 hover:bg-white/10 active:scale-95 sm:w-auto"
             >
-              Browse Catalog
+              Browse Products
             </Link>
           </div>
         </div>

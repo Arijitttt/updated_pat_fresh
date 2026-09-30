@@ -35,18 +35,18 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3.5">
-        {/* Brand Logo */}
-        <Link href="/" className="group flex items-center">
-          <div className="relative flex h-10 w-36 items-center justify-center overflow-hidden rounded-xl bg-white px-2.5 py-1 shadow-sm transition-transform duration-200 group-hover:scale-105 sm:h-11 sm:w-44">
-            <Image
-              src="/logo/pat_logo.jpeg"
-              alt="PatFresh - Where Quality Meets Convenience"
-              fill
-              priority
-              className="object-contain p-0.5"
-            />
-          </div>
-        </Link>
+       {/* Brand Logo */}
+<Link href="/" className="group flex items-center">
+  <div className="relative h-10 w-36 overflow-hidden">
+    <Image
+      src="/logo/pat.png"
+      alt="PatFresh - Where Quality Meets Convenience"
+      fill
+      priority
+      className="object-contain"
+    />
+  </div>
+</Link>
 
         {/* Desktop Navigation Links with Framer Motion Pill */}
         <nav className="hidden items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] p-1.5 backdrop-blur-md md:flex">

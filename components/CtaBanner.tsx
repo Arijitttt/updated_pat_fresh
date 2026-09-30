@@ -27,11 +27,14 @@ export default function CtaBanner() {
           </div>
 
           <h2 className="mt-6 font-display text-3xl font-extrabold tracking-tight sm:text-5xl">
-            See What&apos;s <span className="text-[#ef4444]">Fresh This Week</span>
+            Discover What&apos;s <span className="text-[#ef4444]">In Store</span>
           </h2>
 
           <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-neutral-300 sm:text-base">
-            The catalogue is updated live as fresh catches and farm batches arrive at our Kolkata hub. Check stock status or call ahead for specialized bulk orders.
+           From everyday kitchen essentials to specialty ingredients, frozen favourites and products from around the world — there’s always something new to discover at PatFresh.
+<br />
+<br />
+Browse our growing range, explore by category, and find the products that fit your kitchen, menu or business.
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -39,7 +42,7 @@ export default function CtaBanner() {
               href="/products"
               className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#d32f2f] px-8 py-3.5 text-sm font-bold text-white shadow-lg shadow-red-600/25 transition duration-200 hover:bg-[#b71c1c] active:scale-[0.99] sm:w-auto"
             >
-              <span>Browse Full Catalogue</span>
+              <span>See Our Products</span>
               <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
