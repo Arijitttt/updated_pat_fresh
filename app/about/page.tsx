@@ -108,7 +108,7 @@ export default function AboutPage() {
             <h1 className="mt-6 font-display text-4xl font-black tracking-tight sm:text-6xl lg:text-7xl">
               About{" "}
               <span className="bg-gradient-to-r from-white via-neutral-100 to-neutral-400 bg-clip-text text-transparent">
-                PAT
+                Pat
               </span>
               <span className="bg-gradient-to-r from-[#ff4d4d] via-[#f87171] to-[#ff6b6b] bg-clip-text text-transparent">
                 Fresh
@@ -117,7 +117,7 @@ export default function AboutPage() {
 
             <p className="mt-6 max-w-2xl text-sm leading-relaxed text-neutral-300 sm:text-base">
              From frozen favourites and premium dairy to seafood, meats, imported ingredients and everyday essentials, PatFresh helps businesses find the products they need — and keep them coming.
-<br />
+
 Thousands of products. One supply partner. Less running around.
             </p>
 

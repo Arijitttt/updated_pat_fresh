@@ -1,0 +1,87 @@
+[
+  {
+    "id": "blackberries-1kg",
+    "slug": "blackberries-1kg",
+    "name": "Blackberries - 1kg",
+    "category": "frozen-fruits-berries",
+    "packSize": "1 kg Pouch",
+    "unit": "per kg",
+    "origin": "Imported / Europe",
+    "storage": "-18°C Deep Frozen",
+    "image": "/images/frozen-fruits-berries/Blackberries - 1kg.avif",
+    "description": "Individually Quick Frozen (IQF) whole plump blackberries. Sweet-tart balance for dessert coulis, cheesecakes, and artisan cocktail syrups.",
+    "specifications": {
+      "process": "IQF Grade A",
+      "dietary": "Vegetarian / Vegan",
+      "shelfLife": "24 Months at -18°C"
+    }
+  },
+  {
+    "id": "blueberries-1kg",
+    "slug": "blueberries-1kg",
+    "name": "Blueberries - 1kg",
+    "category": "frozen-fruits-berries",
+    "packSize": "1 kg Pouch",
+    "unit": "per kg",
+    "origin": "Imported / North America",
+    "storage": "-18°C Deep Frozen",
+    "image": "/images/frozen-fruits-berries/Blueberries - 1kg.jpg",
+    "description": "Wild highbush whole IQF blueberries. Retains structural integrity and deep indigo color during baking muffins, tarts, and waffles.",
+    "specifications": {
+      "process": "IQF Grade A",
+      "dietary": "Vegetarian / Vegan",
+      "shelfLife": "24 Months at -18°C"
+    }
+  },
+  {
+    "id": "mixed-berry-1kg",
+    "slug": "mixed-berry-1kg",
+    "name": "Mixed Berry - 1kg",
+    "category": "frozen-fruits-berries",
+    "packSize": "1 kg Pouch",
+    "unit": "per kg",
+    "origin": "Imported",
+    "storage": "-18°C Deep Frozen",
+    "image": "/images/frozen-fruits-berries/Mixed Berry - 1kg.jpg",
+    "description": "Premium 4-berry blend containing whole strawberries, blueberries, raspberries, and blackberries for smoothie bowls and gourmet fruit compotes.",
+    "specifications": {
+      "blend": "Strawberries, Blueberries, Raspberries, Blackberries",
+      "dietary": "Vegetarian / Vegan",
+      "shelfLife": "24 Months at -18°C"
+    }
+  },
+  {
+    "id": "raspberries-1kg",
+    "slug": "raspberries-1kg",
+    "name": "Raspberries - 1kg",
+    "category": "frozen-fruits-berries",
+    "packSize": "1 kg Pouch",
+    "unit": "per kg",
+    "origin": "Imported / Europe",
+    "storage": "-18°C Deep Frozen",
+    "image": "/images/frozen-fruits-berries/Raspberries - 1kg.webp",
+    "description": "Whole IQF ruby red raspberries with delicate seed structure and signature aromatic floral acidity for French patisserie.",
+    "specifications": {
+      "process": "IQF Grade A Whole",
+      "dietary": "Vegetarian / Vegan",
+      "shelfLife": "24 Months at -18°C"
+    }
+  },
+  {
+    "id": "strawberries-1kg",
+    "slug": "strawberries-1kg",
+    "name": "Strawberries - 1kg",
+    "category": "frozen-fruits-berries",
+    "packSize": "1 kg Pouch",
+    "unit": "per kg",
+    "origin": "India / Imported",
+    "storage": "-18°C Deep Frozen",
+    "image": "/images/frozen-fruits-berries/Strawberries - 1kg.png",
+    "description": "Calibrated whole frozen strawberries, stem-removed. Ideal for ice cream purees, strawberry milkshakes, and glaze reductions.",
+    "specifications": {
+      "process": "IQF Stem-Off",
+      "dietary": "Vegetarian / Vegan",
+      "shelfLife": "18 Months at -18°C"
+    }
+  }
+]

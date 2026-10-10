@@ -1,36 +1,20 @@
-import { notFound } from "next/navigation";
+"use client";
+
+import { notFound, useRouter } from "next/navigation";
 import Link from "next/link";
-import type { Metadata } from "next";
 import ProductDetails from "@/components/ProductDetails";
 import ProductGrid from "@/components/ProductGrid";
 import {
-  getAllProductSlugs,
   getProductBySlug,
   getProductsByCategory,
 } from "@/lib/products";
-
-export function generateStaticParams() {
-  return getAllProductSlugs().map((slug) => ({ slug }));
-}
-
-export function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-}): Metadata {
-  const product = getProductBySlug(params.slug);
-  if (!product) return {};
-  return {
-    title: `${product.name} | PatFresh`,
-    description: product.description,
-  };
-}
 
 export default function ProductPage({
   params,
 }: {
   params: { slug: string };
 }) {
+  const router = useRouter();
   const product = getProductBySlug(params.slug);
 
   if (!product) {
@@ -60,27 +44,57 @@ export default function ProductPage({
     : `/products?category=${categoryParam}`;
 
   const brandOrCategoryLabel = subcategory
-    ? `${subcategory.toUpperCase()} Chocolates`
+    ? `${subcategory.replace(/-/g, " ").toUpperCase()}`
     : product.category;
 
   return (
     <main className="min-h-screen bg-[#fafaf9] text-navy">
       <div className="border-b border-neutral-200/80 bg-white">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <Link
-            href={targetHref}
-            className="group inline-flex items-center gap-2 text-xs font-semibold text-neutral-600 transition hover:text-[#d32f2f]"
-          >
-            <svg
-              className="h-4 w-4 transition-transform group-hover:-translate-x-1"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-4">
+          {/* Dual Back Navigation Controls */}
+          <div className="flex items-center gap-3">
+            {/* Option 1: True Browser Previous Page (Preserves exact scroll position, search queries & filters) */}
+            {/* <div className="inline-flex items-center rounded-full border border-neutral-200/90 bg-neutral-50/80 p-1 shadow-xs backdrop-blur-sm">
+              </div> */}
+              <button
+                type="button"
+                onClick={() => router.back()}
+                className="group inline-flex items-center gap-2 rounded-full bg-white px-3.5 py-1.5 text-xs font-bold text-neutral-800 shadow-xs transition-all hover:bg-[#d32f2f] hover:text-white active:scale-95"
+              >
+                <span className="flex h-4 w-4 items-center justify-center rounded-full bg-neutral-100 text-neutral-600 transition-colors group-hover:bg-red-700 group-hover:text-white">
+                  <svg
+                    className="h-2.5 w-2.5 stroke-[3] transition-transform group-hover:-translate-x-0.5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                  </svg>
+                </span>
+                <span>Back</span>
+              </button>
+
+              <span className="mx-1 h-3.5 w-px bg-neutral-200" />
+            
+
+            {/* Option 2: Category Catalog Link */}
+            <Link
+              href={targetHref}
+              className="group inline-flex items-center gap-1.5 text-xs font-semibold text-neutral-600 transition hover:text-[#d32f2f]"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-            </svg>
-            Back to {brandOrCategoryLabel}
-          </Link>
+              <span>Back to {brandOrCategoryLabel}</span>
+              <svg
+                className="h-3.5 w-3.5 text-neutral-400 transition-transform group-hover:translate-x-0.5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+
+          {/* Breadcrumbs */}
           <span className="text-xs font-medium text-neutral-400 capitalize">
             <Link
               href={`/products?category=${categoryParam}`}

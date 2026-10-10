@@ -1,30 +1,22 @@
 [
   {
-    "slug": "chocolates",
-    "name": "Chocolates",
-    "description": "Bars and bites, from single-origin dark to milk and white chocolate.",
-    "file": "chocolates.json"
+    "slug": "bakery",
+    "name": "Bakery",
+    "tagline": "Chocolates, cocoa, fillings & baking essentials",
+    "description": "Professional compounds, cocoa powders, hazelnut fillings, and confectionery supplies for commercial bakeries.",
+    "file": "chocolates.json",
+    "sections": [
+      {
+        "id": "chocolates",
+        "name": "Chocolates",
+        "categories": [
+          { "id": "2m", "name": "2M Brand", "slug": "2m" },
+          { "id": "tenero", "name": "Tenero Brand", "slug": "tenero" }
+        ]
+      }
+    ]
   },
-  {
-    "slug":"beverages",
-    "name":"Beverages",
-    "description":"Tea, coffee, and other drinks.",
-    "file":"beverages.json"
-  },
-  {
-    "slug": "dairy",
-    "name": "Dairy & Non-Dairy",
-    "description": "Commercial fresh cream, butter, cheese blocks, paneer, and plant-based non-dairy whipping creams for kitchens and bakeries.",
-    "file": "dairy.json"
-  },
-  {
-    "slug": "frozen",
-    "name": "Frozen Foods",
-    "tagline": "Fries, snacks, green peas & ready-to-fry",
-    "description": "Frozen vegetables, fruits, and ready-to-cook products.",
-    "image": "https://images.unsplash.com/photo-1576107232684-1279f3908594?w=600&q=80",
-    "file": "frozen.json"
-  },
+  
   {
     "slug": "groceries",
     "name": "Groceries",
@@ -33,11 +25,39 @@
     "file": "groceries.json"
   },
   {
-    "slug": "ready-to-cook",
-    "name": "Ready-to-Cook",
-    "tagline": "Gravy bases, marinated cuts & prepped mixes",
-    "description": "Commercial onion-tomato gravies, makhani bases, marinated meats, paneer tikka preps, and par-cooked food solutions for fast-turnaround commercial kitchens.",
-    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80",
-    "file": "ready-to-cook.json"
-  }
+    "slug": "bar-ingredients",
+    "name": "Bar Ingredients",
+    "tagline": "Syrups, bitters, and cocktail essentials",
+    "description": "Commercial beverage syrups, fruit crushes, cocktail bitters, tonic concentrates, and beverage premixes for bars, cafes, and lounges.",
+    "image": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80",
+    "file": "bar-ingredients.json"
+  },
+  {
+  "slug": "frozen-meat",
+  "name": "Frozen Meat",
+  "tagline": "Imported cuts, seafood, cold cuts & poultry",
+  "description": "Commercial supply of imported meats, seafood, artisanal cold cuts, and premium sausages for hotels, restaurants, and cloud kitchens.",
+  "file": "frozen-meat.json"
+},
+{
+  "slug": "cheese",
+  "name": "Cheese",
+  "tagline": "Gourmet, artisanal & commercial cheeses",
+  "description": "Commercial supply of imported wheels, cheddar slices, cream cheese, and pizza mozzarella for hotels, pizzerias, and bakeries.",
+  "file": "cheese.json"
+},
+{
+  "slug": "frozen-snacks",
+  "name": "Frozen Snacks",
+  "tagline": "Momos, bao, french fries & seafood snacks",
+  "description": "Ready-to-cook commercial frozen snacks including gourmet momos, bao buns, french fries, and breaded seafood appetizers for cafes, bars, and cloud kitchens.",
+  "file": "frozen-snacks.json"
+},
+{
+  "slug": "frozen-fruits-berries",
+  "name": "Frozen Fruits & Berries",
+  "tagline": "IQF berries & purees for patisserie & bars",
+  "description": "Individually quick frozen (IQF) blueberries, strawberries, raspberries, blackberries, and mixed berry blends for pastry kitchens, dessert bars, and beverage blending.",
+  "file": "frozen-fruits-berries.json"
+}
 ]

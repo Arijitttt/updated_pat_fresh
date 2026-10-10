@@ -5,14 +5,58 @@ import { useState } from "react";
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    contactNumber: "",
+    businessName: "",
+    supplyCategory: "frozen",
+    deliveryOutlet: "",
+    requirements: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
+    setError(null);
+
+    try {
+      const res = await fetch("/api/inquiries", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to transmit inquiry");
+      }
+
       setSubmitted(true);
-    }, 600);
+      setFormData({
+        fullName: "",
+        contactNumber: "",
+        businessName: "",
+        supplyCategory: "frozen",
+        deliveryOutlet: "",
+        requirements: "",
+      });
+    } catch (err: any) {
+      setError(err.message || "An error occurred while saving your inquiry.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -27,7 +71,7 @@ export default function ContactForm() {
           Inquiry Transmitted!
         </h3>
         <p className="mt-3 max-w-md text-sm leading-relaxed text-neutral-600">
-          Thank you for reaching out. Our dispatch and wholesale operations desk has received your request and will get back to you shortly.
+          Thank you for reaching out. Your request has been logged and our wholesale operations desk will get back to you shortly.
         </p>
         <button
           onClick={() => setSubmitted(false)}
@@ -55,6 +99,12 @@ export default function ContactForm() {
         </span>
       </div>
 
+      {error && (
+        <div className="mt-4 rounded-xl border border-red-200 bg-red-50 p-3 text-xs font-medium text-red-600">
+          {error}
+        </div>
+      )}
+
       <form onSubmit={handleSubmit} className="mt-8 space-y-5">
         <div className="grid gap-5 sm:grid-cols-2">
           <div>
@@ -63,7 +113,10 @@ export default function ContactForm() {
             </label>
             <input
               type="text"
+              name="fullName"
               required
+              value={formData.fullName}
+              onChange={handleChange}
               placeholder="e.g. James Bond"
               className="mt-2 w-full rounded-xl border border-neutral-200 bg-neutral-50/50 px-4 py-3 text-sm text-neutral-800 outline-none transition duration-150 focus:border-[#d32f2f] focus:bg-white focus:ring-4 focus:ring-red-500/10"
             />
@@ -74,7 +127,10 @@ export default function ContactForm() {
             </label>
             <input
               type="tel"
+              name="contactNumber"
               required
+              value={formData.contactNumber}
+              onChange={handleChange}
               placeholder="+91 98300 00000"
               className="mt-2 w-full rounded-xl border border-neutral-200 bg-neutral-50/50 px-4 py-3 text-sm text-neutral-800 outline-none transition duration-150 focus:border-[#d32f2f] focus:bg-white focus:ring-4 focus:ring-red-500/10"
             />
@@ -88,6 +144,9 @@ export default function ContactForm() {
             </label>
             <input
               type="text"
+              name="businessName"
+              value={formData.businessName}
+              onChange={handleChange}
               placeholder="e.g. Urban Cafe & Bistro"
               className="mt-2 w-full rounded-xl border border-neutral-200 bg-neutral-50/50 px-4 py-3 text-sm text-neutral-800 outline-none transition duration-150 focus:border-[#d32f2f] focus:bg-white focus:ring-4 focus:ring-red-500/10"
             />
@@ -98,13 +157,18 @@ export default function ContactForm() {
             </label>
             <div className="relative mt-2">
               <select
-                defaultValue="frozen"
+                name="supplyCategory"
+                value={formData.supplyCategory}
+                onChange={handleChange}
                 className="w-full appearance-none rounded-xl border border-neutral-200 bg-neutral-50/50 px-4 py-3 text-sm text-neutral-800 outline-none transition duration-150 focus:border-[#d32f2f] focus:bg-white focus:ring-4 focus:ring-red-500/10"
               >
                 <option value="frozen">Frozen Seafood & Meats</option>
-                <option value="ready-to-cook">Ready-to-Cook Products</option>
-                <option value="dairy">Dairy & Cheese Essentials</option>
-                <option value="pantry">Pantry & Bulk Dry Goods</option>
+                <option value="frozen-snacks">Frozen Snacks</option>
+                <option value="frozen-fruits-berries">Frozen Fruits & Berries</option>
+                <option value="bakery">Bakery & Pastry Ingredients</option>
+                <option value="bar-ingredients">Bar Ingredients & Syrups</option>
+                <option value="cheese">Cheese & Dairy Essentials</option>
+                <option value="groceries">Groceries & Commercial Staples</option>
                 <option value="all">Full Catalog Mixed Supply</option>
               </select>
               <div className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-neutral-400">
@@ -122,6 +186,9 @@ export default function ContactForm() {
           </label>
           <input
             type="text"
+            name="deliveryOutlet"
+            value={formData.deliveryOutlet}
+            onChange={handleChange}
             placeholder="e.g. Park Street, Kolkata - 700016"
             className="mt-2 w-full rounded-xl border border-neutral-200 bg-neutral-50/50 px-4 py-3 text-sm text-neutral-800 outline-none transition duration-150 focus:border-[#d32f2f] focus:bg-white focus:ring-4 focus:ring-red-500/10"
           />
@@ -132,8 +199,11 @@ export default function ContactForm() {
             Detailed Requirements / Volume <span className="text-red-500">*</span>
           </label>
           <textarea
+            name="requirements"
             rows={4}
             required
+            value={formData.requirements}
+            onChange={handleChange}
             placeholder="Item cuts, estimated weekly order frequency, delivery schedules..."
             className="mt-2 w-full resize-none rounded-xl border border-neutral-200 bg-neutral-50/50 px-4 py-3 text-sm text-neutral-800 outline-none transition duration-150 focus:border-[#d32f2f] focus:bg-white focus:ring-4 focus:ring-red-500/10"
           />

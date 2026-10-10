@@ -1,14 +1,126 @@
 [
   {
+    "id": "frozen-iqf-blueberries-1kg",
+    "slug": "frozen-iqf-blueberries-1kg",
+    "name": "IQF Whole Wild Blueberries",
+    "category": "frozen",
+    "subcategory": "fruits-berries",
+    "packSize": "1 kg Pouch (Pack of 10 / Carton)",
+    "unit": "per kg",
+    "origin": "Chile / Canada",
+    "storage": "-18°C Deep Frozen",
+    "image": "https://images.unsplash.com/photo-1498557850523-fd3d118b962e?w=800&auto=format&fit=crop&q=80",
+    "description": "Individually Quick Frozen plump wild blueberries. Ideal for bakery fillings, cheesecakes, smoothie bowls, and gourmet desserts.",
+    "specifications": {
+      "process": "Individual Quick Freezing (IQF)",
+      "dietary": "Vegetarian",
+      "shelfLife": "24 Months at -18°C",
+      "netWeight": "1 kg"
+    }
+  },
+  {
+    "id": "frozen-iqf-strawberries-whole-1kg",
+    "slug": "frozen-iqf-strawberries-whole-1kg",
+    "name": "IQF Whole Grade-A Strawberries",
+    "category": "frozen",
+    "subcategory": "fruits-berries",
+    "packSize": "1 kg Pouch (Pack of 10 / Carton)",
+    "unit": "per kg",
+    "origin": "Egypt / India",
+    "storage": "-18°C Deep Frozen",
+    "image": "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=800&auto=format&fit=crop&q=80",
+    "description": "Selected stemless sweet whole strawberries blast-frozen at peak ripeness. Perfect for coulis, compotes, milkshakes, and bar blends.",
+    "specifications": {
+      "process": "IQF Blast Freezing",
+      "dietary": "Vegetarian",
+      "shelfLife": "18 Months at -18°C",
+      "netWeight": "1 kg"
+    }
+  },
+  {
+    "id": "frozen-iqf-mixed-berries-1kg",
+    "slug": "frozen-iqf-mixed-berries-1kg",
+    "name": "IQF 4-Berry Medley Mix",
+    "category": "frozen",
+    "subcategory": "fruits-berries",
+    "packSize": "1 kg Pouch",
+    "unit": "per kg",
+    "origin": "Poland / Serbia",
+    "storage": "-18°C Deep Frozen",
+    "image": "https://images.unsplash.com/photo-1506459225024-1428097a7e18?w=800&auto=format&fit=crop&q=80",
+    "description": "Premium blend of strawberries, blueberries, raspberries, and blackberries for commercial pastry chefs and artisan beverage bars.",
+    "specifications": {
+      "blendRatio": "Strawberries, Blueberries, Raspberries, Blackberries",
+      "dietary": "Vegetarian",
+      "shelfLife": "18 Months at -18°C"
+    }
+  },
+  {
+    "id": "frozen-chicken-breast-boneless-2kg",
+    "slug": "frozen-chicken-breast-boneless-2kg",
+    "name": "Frozen Boneless Skinless Chicken Breast Fillet",
+    "category": "frozen",
+    "subcategory": "meat",
+    "packSize": "2 kg Vacuum Pouch (Pack of 6 / Carton)",
+    "unit": "per pack",
+    "origin": "India",
+    "storage": "-18°C Deep Frozen",
+    "image": "https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=800&auto=format&fit=crop&q=80",
+    "description": "Tender, clean-trimmed boneless chicken breast fillets with zero moisture pump. Ideal for grilling, continental escalopes, and high-volume catering.",
+    "specifications": {
+      "cut": "Single Lobe Breast Fillet",
+      "dietary": "Non-Vegetarian / Halal Certified",
+      "shelfLife": "12 Months at -18°C",
+      "netWeight": "2 kg"
+    }
+  },
+  {
+    "id": "frozen-chicken-frankfurter-sausage-1kg",
+    "slug": "frozen-chicken-frankfurter-sausage-1kg",
+    "name": "Smoked Chicken Frankfurter Sausages",
+    "category": "frozen",
+    "subcategory": "meat",
+    "packSize": "1 kg Pack (approx. 20 pcs)",
+    "unit": "per pack",
+    "origin": "India",
+    "storage": "-18°C Deep Frozen",
+    "image": "https://images.unsplash.com/photo-1541832676-9b763b0239ab?w=800&auto=format&fit=crop&q=80",
+    "description": "Naturally smoked, mildly spiced chicken frankfurters with natural casing. Ready to boil, grill, or pan fry for breakfast buffets and hot dogs.",
+    "specifications": {
+      "pieceCount": "~20 Frankfurters",
+      "dietary": "Non-Vegetarian",
+      "shelfLife": "9 Months at -18°C"
+    }
+  },
+  {
+    "id": "frozen-mutton-keema-bulk-1kg",
+    "slug": "frozen-mutton-keema-bulk-1kg",
+    "name": "Coarse Cut Frozen Mutton Mince (Keema)",
+    "category": "frozen",
+    "subcategory": "meat",
+    "packSize": "1 kg Sealed Block",
+    "unit": "per kg",
+    "origin": "India",
+    "storage": "-18°C Deep Frozen",
+    "image": "https://images.unsplash.com/photo-1588168333986-5078d3ae3976?w=800&auto=format&fit=crop&q=80",
+    "description": "80/20 lean-to-fat ratio premium goat mince prepared under hygienic cold processing. Ideal for seekh kebabs, samosa stuffings, and Mughlai gravies.",
+    "specifications": {
+      "meatRatio": "80% Lean / 20% Fat",
+      "dietary": "Non-Vegetarian / Halal",
+      "shelfLife": "12 Months at -18°C"
+    }
+  },
+  {
     "id": "frozen-french-fries-6mm-2-5kg",
     "slug": "frozen-french-fries-6mm-2-5kg",
     "name": "Frozen French Fries (6mm Shoestring)",
     "category": "frozen",
+    "subcategory": "snacks",
     "packSize": "2.5 kg Pouch (Pack of 4 / Carton)",
     "unit": "per pack",
     "origin": "India",
     "storage": "-18°C Deep Frozen",
-    "image": "https://images.unsplash.com/photo-1576107232684-1279f3908594?w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1576107232684-1279f3908594?w=800&auto=format&fit=crop&q=80",
     "description": "High-yield commercial shoestring french fries with long crisp hold time, formulated for fast-service kitchens and QSR diners.",
     "specifications": {
       "cutSize": "6mm Shoestring",
@@ -18,37 +130,21 @@
     }
   },
   {
-    "id": "frozen-iqf-green-peas-bulk",
-    "slug": "frozen-iqf-green-peas-bulk",
-    "name": "IQF Sweet Green Peas",
+    "id": "frozen-veg-burger-patty-bulk",
+    "slug": "frozen-veg-burger-patty-bulk",
+    "name": "Crispy Veg Burger Patty (Commercial Pack)",
     "category": "frozen",
-    "packSize": "1 kg / 5 kg Pouch",
-    "unit": "per kg",
+    "subcategory": "snacks",
+    "packSize": "Pack of 12 / 20 Patties",
+    "unit": "per pack",
     "origin": "India",
     "storage": "-18°C Deep Frozen",
-    "image": "https://images.unsplash.com/photo-1587735243615-c03f25aaff15?w=600&q=80",
-    "description": "Individually Quick Frozen (IQF) tender green peas, preserving natural sweetness, vibrant green color, and tender texture for curries and rice dishes.",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&auto=format&fit=crop&q=80",
+    "description": "Pre-breaded seasoned vegetable patties with potato, green peas, and carrots. Ready to deep fry or air fry directly from frozen.",
     "specifications": {
-      "process": "Individual Quick Freezing (IQF)",
+      "pattyWeight": "75g - 80g each",
       "dietary": "Vegetarian",
-      "shelfLife": "12 Months at -18°C"
-    }
-  },
-  {
-    "id": "frozen-iqf-sweet-corn-bulk",
-    "slug": "frozen-iqf-sweet-corn-bulk",
-    "name": "IQF American Sweet Corn Kernels",
-    "category": "frozen",
-    "packSize": "1 kg Pouch",
-    "unit": "per kg",
-    "origin": "India",
-    "storage": "-18°C Deep Frozen",
-    "image": "https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=600&q=80",
-    "description": "Plump and sweet whole-kernel corn processed under strict cold-chain conditions. Ready for soups, pizzas, and continental sautés.",
-    "specifications": {
-      "process": "IQF Blast Freezing",
-      "dietary": "Vegetarian",
-      "netWeight": "1 kg"
+      "shelfLife": "12 Months"
     }
   },
   {
@@ -56,33 +152,17 @@
     "slug": "frozen-spring-roll-pastry-sheets",
     "name": "Frozen Spring Roll Pastry Sheets (8.5 inch)",
     "category": "frozen",
+    "subcategory": "snacks",
     "packSize": "50 Sheets / Pack (550g)",
     "unit": "per pack",
     "origin": "India",
     "storage": "-18°C Deep Frozen",
-    "image": "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=800&auto=format&fit=crop&q=80",
     "description": "Pliable, thin wheat pastry sheets that fry up golden and crispy without absorbing excess oil. Ideal for dim sum counters and banquets.",
     "specifications": {
       "sheetSize": "8.5 x 8.5 inches",
       "sheetCount": "50 Sheets",
       "dietary": "Vegetarian"
-    }
-  },
-  {
-    "id": "frozen-veg-burger-patty-bulk",
-    "slug": "frozen-veg-burger-patty-bulk",
-    "name": "Crispy Veg Burger Patty (Commercial Pack)",
-    "category": "frozen",
-    "packSize": "Pack of 12 / 20 Patties",
-    "unit": "per pack",
-    "origin": "India",
-    "storage": "-18°C Deep Frozen",
-    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80",
-    "description": "Pre-breaded seasoned vegetable patties with potato, green peas, and carrots. Ready to deep fry or air fry directly from frozen.",
-    "specifications": {
-      "pattyWeight": "75g - 80g each",
-      "dietary": "Vegetarian",
-      "shelfLife": "12 Months"
     }
   }
 ]

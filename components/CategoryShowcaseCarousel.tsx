@@ -23,19 +23,64 @@ export default function CategoryShowcaseCarousel({
   categories,
   productsByCategory,
 }: CategoryShowcaseCarouselProps) {
-  const activeSlides = categories.slice(0, 6);
+  // Show all categories except "all"
+  const activeSlides = categories.filter((cat) => cat.slug !== "all");
   const [currentIndex, setCurrentIndex] = useState(0);
   const productTrackRef = useRef<HTMLDivElement>(null);
 
   const currentCategory = activeSlides[currentIndex] || activeSlides[0];
-  // ✅ New (loads every product in that category):
-const categoryProducts = productsByCategory[currentCategory?.slug] || [];
 
-  // Scrolls exactly 1 card width or a full 3-card page on click
+  // Resolve category products with alias fallbacks
+  const categoryProducts = (() => {
+    if (!currentCategory) return [];
+    const slug = currentCategory.slug.toLowerCase();
+
+    if (slug === "bakery") {
+      return (
+        productsByCategory["bakery"] ||
+        productsByCategory["chocolates"] ||
+        []
+      );
+    }
+    if (slug === "frozen-meat") {
+      return (
+        productsByCategory["frozen-meat"] ||
+        productsByCategory["meat"] ||
+        []
+      );
+    }
+    if (slug === "frozen-snacks") {
+      return (
+        productsByCategory["frozen-snacks"] ||
+        productsByCategory["snacks"] ||
+        []
+      );
+    }
+    if (slug === "frozen-fruits-berries" || slug === "fruits-berries") {
+      return (
+        productsByCategory["frozen-fruits-berries"] ||
+        productsByCategory["fruits-berries"] ||
+        []
+      );
+    }
+    if (slug === "cheese") {
+      return productsByCategory["cheese"] || [];
+    }
+    if (slug === "frozen") {
+      return (
+        productsByCategory["frozen"] ||
+        productsByCategory["frozen-foods"] ||
+        []
+      );
+    }
+
+    return productsByCategory[slug] || [];
+  })();
+
+  // Scrolls exactly 1 container width on click
   const scrollProducts = (direction: "left" | "right") => {
     if (!productTrackRef.current) return;
     const containerWidth = productTrackRef.current.clientWidth;
-    // Scroll by one full visible row (3 items)
     productTrackRef.current.scrollBy({
       left: direction === "left" ? -containerWidth : containerWidth,
       behavior: "smooth",
@@ -82,7 +127,7 @@ const categoryProducts = productsByCategory[currentCategory?.slug] || [];
         </div>
       </div>
 
-      {/* 6 Category Navigation Slide Pills */}
+      {/* Dynamic Category Navigation Slide Pills */}
       <div className="mt-4 flex gap-2 overflow-x-auto pb-2 scrollbar-none">
         {activeSlides.map((cat, idx) => {
           const isActive = idx === currentIndex;
@@ -156,7 +201,6 @@ const categoryProducts = productsByCategory[currentCategory?.slug] || [];
               categoryProducts.map((product) => (
                 <div
                   key={product.id || product.slug}
-                  /* Exactly 1 on mobile, 2 on tablet, and precisely 3 on desktop */
                   className="w-full sm:w-[calc((100%-24px)/2)] md:w-[calc((100%-48px)/3)] shrink-0 snap-start"
                 >
                   <ProductCard product={product} />

@@ -14,40 +14,68 @@ export interface CategoryItem {
 }
 
 const CATEGORY_FALLBACK_IMAGES: Record<string, { img: string; tag: string }> = {
- chocolates: {
-  img: "/categories/dark-chocolate-truffles-close-up.jpg",
-  tag: "Gourmet confectionery",
-},
-  beverages: {
-    img: "/categories/breverages.jpg",
-    tag: "Teas, syrups & bases",
+  bakery: {
+    img: "/categories/dark-chocolate-truffles-close-up.jpg",
+    tag: "Chocolates, cocoa & baking",
   },
-  dairy: {
-  img: "/categories/dairy-products.jpg",
-  tag: "Milk, creams, cheeses & plant bases",
+  chocolates: {
+    img: "/categories/dark-chocolate-truffles-close-up.jpg",
+    tag: "Gourmet confectionery",
+  },
+  // beverages: {
+  //   img: "/categories/breverages.jpg",
+  //   tag: "Teas, syrups & bases",
+  // },
+  // dairy: {
+  //   img: "/categories/dairy-products.jpg",
+  //   tag: "Milk, creams, cheeses & plant bases",
+  // },
+  // frozen: {
+  //   img: "/categories/frozen.jpg",
+  //   tag: "Fries, snacks & IQF vegetables",
+  // },
+  groceries: {
+    img: "/categories/groceries.png",
+    tag: "Oils, sauces, spices & seasonings",
+  },
+  // "ready-to-cook": {
+  //   img: "/categories/ready_to_eat.png",
+  //   tag: "Gravy bases, marinated cuts & prepped preps",
+  // },
+  "bar-ingredients": {
+    img: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800&auto=format&fit=crop&q=80",
+    tag: "Syrups, bitters & cocktail essentials",
+  },
+  "frozen-meat": {
+    img: "/images/honesty-foods/Honesty Foods - Pork Boneless Less Fat (KGS).jpg",
+    tag: "Imported cuts, seafood, cold cuts & poultry",
+  },
+  cheese: {
+  img: "/images/cheese/imported-cheese/Parmesan Cheese - Wheel.jpg",
+  tag: "Imported & commercial cheese",
 },
-frozen: {
-  img: "/categories/frozen.jpg",
-  tag: "Fries, snacks & IQF vegetables",
+"frozen-snacks": {
+  img: "/images/frozen-snacks/prasuma/Prasuma FS Chicken Momos 600g.jpg",
+  tag: "Momos, bao, fries & seafood bites",
 },
-groceries: {
-  img: "/categories/groceries.png",
-  tag: "Oils, sauces, spices & seasonings",
-},
-"ready-to-cook": {
-  img: "/categories/ready_to_eat.png",
-  tag: "Gravy bases, marinated cuts & prepped preps",
-},
+"frozen-fruits-berries": {
+    img: "/images/frozen-fruits-berries/Blueberries - 1kg.jpg",
+    tag: "IQF berries & purees for patisserie & bars",
+  },
 };
 
 const defaultCategories: CategoryItem[] = [
-
-  { name: "Chocolates", slug: "chocolates" },
-  { name: "Beverages", slug: "beverages" },
-  { name: "Dairy & Non-Dairy", slug: "dairy" },
-  { name: "Frozen Items", slug: "frozen" },
+  { name: "Bakery", slug: "bakery" },
+  // { name: "Beverages", slug: "beverages" },
+  // { name: "Dairy & Non-Dairy", slug: "dairy" },
+  // { name: "Frozen Items", slug: "frozen" },
   { name: "Groceries", slug: "groceries" },
-  { name: "Ready to Cook", slug: "ready-to-cook" },
+  // { name: "Ready to Cook", slug: "ready-to-cook" },
+  { name: "Bar Ingredients", slug: "bar-ingredients" },
+  { name: "Frozen Meat", slug: "frozen-meat" },
+  { name: "Cheese", slug: "cheese" },
+  { name: "Frozen Snacks", slug: "frozen-snacks" },
+  { name: "Frozen Fruits & Berries", slug: "frozen-fruits-berries" },
 ];
 
 const containerVariants: Variants = {
@@ -117,13 +145,13 @@ export default function CategoryGrid({
           </Link>
         </div>
 
-        {/* Animated Shelf with Glassmorphic Cards */}
+        {/* 7-Column Shelf with Glassmorphic Cards */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.15 }}
-          className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6 lg:gap-5"
+          className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-7 lg:gap-4"
         >
           {activeCategories.map((cat) => {
             const fallback = CATEGORY_FALLBACK_IMAGES[cat.slug] || {
@@ -142,10 +170,10 @@ export default function CategoryGrid({
               <motion.div key={cat.slug} variants={itemVariants}>
                 <Link
                   href={`/products?category=${cat.slug}`}
-                  className="group relative flex h-full flex-col items-center justify-between rounded-2xl border border-white/10 bg-white/[0.04] p-5 text-center backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-[#ef4444]/40 hover:bg-white/[0.08] hover:shadow-xl hover:shadow-red-950/20"
+                  className="group relative flex h-full flex-col items-center justify-between rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-center backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-[#ef4444]/40 hover:bg-white/[0.08] hover:shadow-xl hover:shadow-red-950/20"
                 >
                   {/* Circular Image Container */}
-                  <div className="relative flex h-24 w-24 items-center justify-center sm:h-28 sm:w-28">
+                  <div className="relative flex h-20 w-20 items-center justify-center sm:h-24 sm:w-24">
                     <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[#d32f2f]/30 via-transparent to-transparent opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-100" />
 
                     <div className="relative h-full w-full overflow-hidden rounded-full border-2 border-white/15 p-1 transition-colors duration-300 group-hover:border-[#ef4444]">
@@ -154,7 +182,7 @@ export default function CategoryGrid({
                           src={imageSrc}
                           alt={cat.name}
                           fill
-                          sizes="(max-width: 640px) 96px, 112px"
+                          sizes="(max-width: 640px) 80px, 96px"
                           className="object-cover transition-transform duration-500 ease-out group-hover:scale-115"
                         />
                       </div>
@@ -162,20 +190,20 @@ export default function CategoryGrid({
                   </div>
 
                   {/* Labels */}
-                  <div className="mt-4">
-                    <h3 className="text-sm font-bold text-white transition-colors duration-200 group-hover:text-[#ef4444]">
+                  <div className="mt-3">
+                    <h3 className="text-xs font-bold text-white transition-colors duration-200 group-hover:text-[#ef4444] sm:text-sm">
                       {cat.name}
                     </h3>
                     {tagText && (
-                      <p className="mt-1 text-[11px] text-neutral-400">
+                      <p className="mt-1 line-clamp-2 text-[10px] text-neutral-400">
                         {tagText}
                       </p>
                     )}
                   </div>
 
                   {/* Arrow Action Button */}
-                  <div className="mt-3 flex h-6 w-6 items-center justify-center rounded-full bg-white/10 text-neutral-300 transition-all duration-200 group-hover:bg-[#d32f2f] group-hover:text-white">
-                    <svg className="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+                  <div className="mt-3 flex h-5 w-5 items-center justify-center rounded-full bg-white/10 text-neutral-300 transition-all duration-200 group-hover:bg-[#d32f2f] group-hover:text-white">
+                    <svg className="h-2.5 w-2.5" viewBox="0 0 20 20" fill="currentColor">
                       <path
                         fillRule="evenodd"
                         d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
