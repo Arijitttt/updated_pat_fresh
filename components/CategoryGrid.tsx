@@ -43,23 +43,23 @@ const CATEGORY_FALLBACK_IMAGES: Record<string, { img: string; tag: string }> = {
   //   tag: "Gravy bases, marinated cuts & prepped preps",
   // },
   "bar-ingredients": {
-    img: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800&auto=format&fit=crop&q=80",
+    img: "/icons/bar_ingredients_1.jpg",
     tag: "Syrups, bitters & cocktail essentials",
   },
   "frozen-meat": {
-    img: "/images/honesty-foods/Honesty Foods - Pork Boneless Less Fat (KGS).jpg",
+    img: "/icons/frozen_meet.jpeg",
     tag: "Imported cuts, seafood, cold cuts & poultry",
   },
   cheese: {
-  img: "/images/cheese/imported-cheese/Parmesan Cheese - Wheel.jpg",
+  img: "/icons/cheese.jpeg",
   tag: "Imported & commercial cheese",
 },
 "frozen-snacks": {
-  img: "/images/frozen-snacks/prasuma/Prasuma FS Chicken Momos 600g.jpg",
+  img: "/icons/frozen_snacks.jpeg",
   tag: "Momos, bao, fries & seafood bites",
 },
 "frozen-fruits-berries": {
-    img: "/images/frozen-fruits-berries/Blueberries - 1kg.jpg",
+    img: "/icons/frozen_barries.jpeg",
     tag: "IQF berries & purees for patisserie & bars",
   },
 };

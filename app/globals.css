@@ -6,6 +6,18 @@
   color-scheme: light;
 }
 
+/* Hide scrollbar globally across all browsers */
+html,
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge, Opera */
+}
+
 body {
   background-color: #e9edf2 !important;
   color: #0f1b2b;

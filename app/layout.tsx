@@ -25,6 +25,11 @@ const site = getSiteInfo();
 export const metadata: Metadata = {
   title: `${site.name} — ${site.tagline}`,
   description: site.description,
+  icons: {
+    icon: "/logo/pat.png",
+    shortcut: "/logo/pat.png",
+    apple: "/logo/pat.png",
+  },
 };
 
 export default function RootLayout({
