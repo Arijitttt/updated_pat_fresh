@@ -150,10 +150,11 @@ export default function RfqDrawer() {
                     onChange={(e) => setDeliveryArea(e.target.value)}
                     className="mt-1.5 w-full rounded-xl border border-white/10 bg-[#0f172a] px-3.5 py-2 text-xs text-white focus:border-[#d32f2f] focus:outline-none"
                   >
-                    <option value="Central (Park Street / Camac St)">Central (Park Street / Camac St)</option>
-                    <option value="East (Salt Lake / New Town)">East (Salt Lake / New Town)</option>
-                    <option value="South (Ballygunge / Alipore / Jadavpur)">South (Ballygunge / Alipore)</option>
-                    <option value="North / Howrah Hub">North / Howrah Hub</option>
+                    <option value="Central (Park Street / Camac St)">Central</option>
+                    <option value="East (Salt Lake / New Town)">East</option>
+                    <option value="South (Ballygunge / Alipore / Jadavpur)">South</option>
+                    <option value="North / Howrah Hub">North</option>
+                    <option value="West">West</option>
                   </select>
                 </div>
 

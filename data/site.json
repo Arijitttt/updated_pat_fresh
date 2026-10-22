@@ -1,6 +1,6 @@
 {
-  "name": "PAT Fresh",
-  "tagline": "Fish, vegetables, and fruit from local markets, catalogued daily.",
+  "name": "PatFresh",
+  
   "description": "A running catalogue of what's in stock this week — browse by category, check origins, and see what's fresh.",
   "phone": "+91 8777352462",
   "email": "dm.patfresh@gmail.com",
@@ -12,3 +12,5 @@
     { "label": "Catalogue updated", "value": "Weekly" }
   ]
 }
+
+

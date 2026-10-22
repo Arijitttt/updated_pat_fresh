@@ -23,7 +23,7 @@ const inter = Inter({
 const site = getSiteInfo();
 
 export const metadata: Metadata = {
-  title: `${site.name} — ${site.tagline}`,
+  title: `${site.name}`,
   description: site.description,
   icons: {
     icon: "/logo/pat.png",
