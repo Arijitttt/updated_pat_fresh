@@ -39,8 +39,10 @@ export default function ContactForm() {
         body: JSON.stringify(formData),
       });
 
+      const data = await res.json();
+
       if (!res.ok) {
-        throw new Error("Failed to transmit inquiry");
+        throw new Error(data.error || "Failed to transmit inquiry");
       }
 
       setSubmitted(true);
@@ -53,7 +55,7 @@ export default function ContactForm() {
         requirements: "",
       });
     } catch (err: any) {
-      setError(err.message || "An error occurred while saving your inquiry.");
+      setError(err.message || "An error occurred while transmitting your inquiry.");
     } finally {
       setLoading(false);
     }
@@ -71,7 +73,7 @@ export default function ContactForm() {
           Inquiry Transmitted!
         </h3>
         <p className="mt-3 max-w-md text-sm leading-relaxed text-neutral-600">
-          Thank you for reaching out. Your request has been logged and our wholesale operations desk will get back to you shortly.
+          Thank you for reaching out. Your request has been logged directly into our operations sheet and our wholesale team will get back to you shortly.
         </p>
         <button
           onClick={() => setSubmitted(false)}
@@ -117,7 +119,7 @@ export default function ContactForm() {
               required
               value={formData.fullName}
               onChange={handleChange}
-              placeholder="e.g. James Bond"
+              placeholder="e.g. Rohan Patodia"
               className="mt-2 w-full rounded-xl border border-neutral-200 bg-neutral-50/50 px-4 py-3 text-sm text-neutral-800 outline-none transition duration-150 focus:border-[#d32f2f] focus:bg-white focus:ring-4 focus:ring-red-500/10"
             />
           </div>
