@@ -45,7 +45,7 @@ export default function RootLayout({
         <Script
           id="google-tag-manager"
           strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtm.js?id=GTM-WSCCZW9S"
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-KHSX6B9T"
         />
         <Script id="google-analytics-init" strategy="afterInteractive">
           {`
@@ -61,7 +61,7 @@ export default function RootLayout({
         {/* Google Tag Manager (noscript fallback) */}
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-WSCCZW9S"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-KHSX6B9T"
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
